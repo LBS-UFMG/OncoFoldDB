@@ -1,0 +1,450 @@
+CRITICAL - 2024-06-16 18:45:04 --> ErrorException: fopen(../VERSION.md): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH/Views/template.php on line 118.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../VERSION.md): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Views/template.php', 118)
+ 2 APPPATH/Views/template.php(118): fopen('../VERSION.md', 'r')
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/template.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/View/View.php(250): CodeIgniter\View\View->render('template', [], true)
+ 6 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 7 APPPATH/Controllers/Home.php(9): view('home')
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 18:45:06 --> ErrorException: fopen(../VERSION.md): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH/Views/template.php on line 118.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../VERSION.md): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Views/template.php', 118)
+ 2 APPPATH/Views/template.php(118): fopen('../VERSION.md', 'r')
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/template.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/View/View.php(250): CodeIgniter\View\View->render('template', [], true)
+ 6 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 7 APPPATH/Controllers/Home.php(9): view('home')
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 18:45:08 --> ErrorException: fopen(../VERSION.md): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in APPPATH/Views/template.php on line 118.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../VERSION.md): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Views/template.php', 118)
+ 2 APPPATH/Views/template.php(118): fopen('../VERSION.md', 'r')
+ 3 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/template.php')
+ 4 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/View/View.php(250): CodeIgniter\View\View->render('template', [], true)
+ 6 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 7 APPPATH/Controllers/Home.php(9): view('home')
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 19:46:55 --> ParseError: syntax error, unexpected token "return"
+[Method: GET, Route: entry/asdf]
+in APPPATH/Controllers/Home.php on line 31.
+ 1 VENDORPATH/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/Users/diego/Documents/GitHub/rnapedia/vendor/composer/../../app/Controllers/Home.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Home')
+ 3 SYSTEMPATH/CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 4 SYSTEMPATH/CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 19:47:38 --> ErrorException: Undefined variable $data
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Views/entry.php on line 6.
+ 1 APPPATH/Views/entry.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php', 6)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(31): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('$id')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 19:47:44 --> ErrorException: Undefined variable $data
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Views/entry.php on line 6.
+ 1 APPPATH/Views/entry.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php', 6)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(31): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('$id')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 19:47:45 --> ErrorException: Undefined variable $data
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Views/entry.php on line 6.
+ 1 APPPATH/Views/entry.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', '/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php', 6)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(31): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('$id')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 19:53:20 --> TypeError: App\Controllers\Home::entry(): Argument #1 ($id) must be of type ?App\Controllers\any, string given, called in /Users/diego/Documents/GitHub/rnapedia/vendor/codeigniter4/framework/system/CodeIgniter.php on line 933
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Controllers/Home.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('$id')
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 19:54:37 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::entry(), 0 passed in /Users/diego/Documents/GitHub/rnapedia/vendor/codeigniter4/framework/system/CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Controllers/Home.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 19:54:38 --> ArgumentCountError: Too few arguments to function App\Controllers\Home::entry(), 0 passed in /Users/diego/Documents/GitHub/rnapedia/vendor/codeigniter4/framework/system/CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Controllers/Home.php on line 27.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 19:55:35 --> ErrorException: Undefined variable $id
+[Method: GET, Route: entry/1234]
+in APPPATH/Controllers/Home.php on line 30.
+ 1 APPPATH/Controllers/Home.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 30)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('$id')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:10:55 --> ErrorException: Undefined variable $complex_data
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Views/entry.php on line 11.
+ 1 APPPATH/Views/entry.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $complex_data', '/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php', 11)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(41): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1A34_B_A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:11:06 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Views/entry.php on line 11.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 3 APPPATH/Controllers/Home.php(41): view('entry', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1A34_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:15:44 --> ErrorException: Undefined variable $complex_name_html
+[Method: GET, Route: entry/1A34_B_A]
+in APPPATH/Views/entry.php on line 15.
+ 1 APPPATH/Views/entry.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $complex_name_html', '/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php', 15)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(41): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1A34_B_A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:48:47 --> ErrorException: file_get_contents(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): file_get_contents('/data/structures/8WO8_B_A/info.txt')
+ 3 APPPATH/Controllers/Home.php(47): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:48:48 --> ErrorException: file_get_contents(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): file_get_contents('/data/structures/8WO8_B_A/info.txt')
+ 3 APPPATH/Controllers/Home.php(47): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:50:15 --> ErrorException: file_get_contents(http://localhost:8081/data/structures/8WO8_B_A/info.txt): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(http://localhost:8081/data/structures/8WO8_B_A/info.txt): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): file_get_contents('http://localhost:8081/data/structures/8WO8_B_A/info.txt')
+ 3 APPPATH/Controllers/Home.php(46): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:51:41 --> ErrorException: file_get_contents(http://localhost:8081/data/structures/8WO8_B_A/info.txt): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(http://localhost:8081/data/structures/8WO8_B_A/info.txt): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): file_get_contents('http://localhost:8081/data/structures/8WO8_B_A/info.txt')
+ 3 APPPATH/Controllers/Home.php(46): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:51:41 --> ErrorException: fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('/data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:51:49 --> ErrorException: fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('/data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:52:26 --> ErrorException: fopen(../../public/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../../public/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('../../public/data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:52:27 --> ErrorException: fopen(../../public/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../../public/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('../../public/data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:52:45 --> ErrorException: fopen(../../public/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../../public/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('../../public/data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:53:05 --> ErrorException: fopen(../../data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../../data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('../../data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:53:09 --> ErrorException: fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('/data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:53:10 --> ErrorException: fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('/data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:53:34 --> ErrorException: fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/data/structures/8WO8_B_A/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('/data/structures/8WO8_B_A/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(56): App\Controllers\Home->getInfo('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:55:42 --> TypeError: App\Controllers\Home::getInfo(): Return value must be of type string, array returned
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 46.
+ 1 APPPATH/Controllers/Home.php(54): App\Controllers\Home->getInfo('8WO8_B_A')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:55:54 --> ErrorException: Array to string conversion
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/rnapedia/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(60): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:57:14 --> ErrorException: Array to string conversion
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 47.
+ 1 APPPATH/Controllers/Home.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 47)
+ 2 APPPATH/Controllers/Home.php(56): App\Controllers\Home->getInfo('8WO8_B_A')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:57:15 --> ErrorException: Array to string conversion
+[Method: GET, Route: entry/8WO8_B_A]
+in APPPATH/Controllers/Home.php on line 47.
+ 1 APPPATH/Controllers/Home.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 47)
+ 2 APPPATH/Controllers/Home.php(56): App\Controllers\Home->getInfo('8WO8_B_A')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_A')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 22:59:52 --> ErrorException: fopen(./data/structures/8WO8_B_b/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_b]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/structures/8WO8_B_b/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('./data/structures/8WO8_B_b/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_b')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_b')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 23:00:00 --> ErrorException: fopen(./data/structures/8WO8_B_ba/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_ba]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/structures/8WO8_B_ba/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('./data/structures/8WO8_B_ba/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_ba')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_ba')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')
+CRITICAL - 2024-06-16 23:00:05 --> ErrorException: fopen(./data/structures/8WO8_B_ba/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/8WO8_B_ba]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/structures/8WO8_B_ba/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/rnapedia/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('./data/structures/8WO8_B_ba/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(55): App\Controllers\Home->getInfo('8WO8_B_ba')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('8WO8_B_ba')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/rnapedia/public/index.php')

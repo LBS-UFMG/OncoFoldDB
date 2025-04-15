@@ -1,0 +1,653 @@
+CRITICAL - 2025-01-19 02:01:23 --> ErrorException: fopen(http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2lzm')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 02:02:25 --> ErrorException: fopen(http://localhost:8080//data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080//data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080//data/pdb/2/2LZM/2LZM_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2LZM')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 02:03:37 --> ErrorException: fopen(http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2lzm')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 02:05:12 --> ErrorException: fopen(http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080//data/pdb/2/2lzm/2lzm_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2lzm')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 02:08:35 --> ErrorException: fopen(http://localhost:8080//data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080//data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080//data/pdb/2/2LZM/2LZM_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2LZM')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 02:10:01 --> ErrorException: fopen(http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2LZM')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 02:11:12 --> ErrorException: fopen(http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2LZM')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 02:12:48 --> ErrorException: fopen(http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2LZM')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 13:51:29 --> ErrorException: fopen(http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: HTTP request failed!', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('http://localhost:8080/data/pdb/2/2LZM/2LZM_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2LZM')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 13:55:36 --> ErrorException: fopen(/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/data/pdb/2/2LZM/2LZM_info.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('/data/pdb/2/2LZM/2LZM_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('2LZM')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 13:55:55 --> ErrorException: Undefined array key 3
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Controllers/Home.php on line 85.
+ 1 APPPATH/Controllers/Home.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 85)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:01:55 --> ErrorException: fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('./data/pdb/1/1SHR/1SHR_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('1SHR')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:27:45 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/V5MNSA]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('V5MNSA')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:36:23 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/Y4XQPU]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('Y4XQPU')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:39:32 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/KW295W]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('KW295W')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:43:39 --> ErrorException: mkdir(): No such file or directory
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 82)
+ 2 APPPATH/Controllers/Project.php(82): mkdir('../../public/data/projects/PRGWMZ')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:44:59 --> ErrorException: mkdir(): No such file or directory
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 82)
+ 2 APPPATH/Controllers/Project.php(82): mkdir('../../public/data/projects/M9U6OV')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:47:46 --> ErrorException: mkdir(): No such file or directory
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 82)
+ 2 APPPATH/Controllers/Project.php(82): mkdir('../../public/data/projects/IHIW26')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:47:57 --> ErrorException: mkdir(): No such file or directory
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 82)
+ 2 APPPATH/Controllers/Project.php(82): mkdir('../../public/data/EF0YUE')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:48:24 --> ErrorException: fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/CWC79C/data.pdb): Failed to open stream: No such file or directory
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 94.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/CWC79C/data.pdb): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 94)
+ 2 APPPATH/Controllers/Project.php(94): fopen('/Users/diego/Documents/GitHub/cocada-db/public/data/CWC79C/data.pdb', 'w')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:50:06 --> ErrorException: chmod(): No such file or directory
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 132.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 132)
+ 2 APPPATH/Controllers/Project.php(132): chmod('../../public/data/projects/YJ8RY0', 493)
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:50:19 --> ErrorException: chmod(): No such file or directory
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 132.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chmod(): No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 132)
+ 2 APPPATH/Controllers/Project.php(132): chmod('../../public/data/projects/0AUU1L', 493)
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:54:31 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/C1R3SQ]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('C1R3SQ')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:54:33 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/C1R3SQ]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('C1R3SQ')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:54:34 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/C1R3SQ]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('C1R3SQ')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:54:35 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/C1R3SQ]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('C1R3SQ')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:54:35 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/C1R3SQ]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('C1R3SQ')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:54:59 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/C1R3SQ]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('C1R3SQ')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 15:55:00 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/C1R3SQ]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('C1R3SQ')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 16:17:24 --> ErrorException: fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('./data/pdb/1/1SHR/1SHR_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('1SHR')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:23:07 --> Error: Call to a member function isValid() on null
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 110.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:23:26 --> Error: Call to a member function isValid() on null
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 105.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:24:59 --> Error: Call to a member function move() on null
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 104.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:37:19 --> ErrorException: mkdir(): Read-only file system
+[Method: POST, Route: run]
+in SYSTEMPATH/HTTP/Files/UploadedFile.php on line 181.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): Read-only file system', '/Users/diego/Documents/GitHub/cocada-db/vendor/codeigniter4/framework/system/HTTP/Files/UploadedFile.php', 181)
+ 2 SYSTEMPATH/HTTP/Files/UploadedFile.php(181): mkdir('/public/data/projects/8EOP23/tmp/', 511, true)
+ 3 SYSTEMPATH/HTTP/Files/UploadedFile.php(135): CodeIgniter\HTTP\Files\UploadedFile->setPath('/public/data/projects/8EOP23/tmp/')
+ 4 APPPATH/Controllers/Project.php(103): CodeIgniter\HTTP\Files\UploadedFile->move('/public/data/projects/8EOP23/tmp/', 'data.pdb')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:42:42 --> ErrorException: fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/projects/DSRSZV/contacts.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: project/DSRSZV]
+in APPPATH/Controllers/Project.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/projects/DSRSZV/contacts.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 42)
+ 2 APPPATH/Controllers/Project.php(42): fopen('/Users/diego/Documents/GitHub/cocada-db/public/data/projects/DSRSZV/contacts.csv', 'r')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('DSRSZV')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:49:18 --> Error: Cannot access protected property CodeIgniter\HTTP\Files\UploadedFile::$size
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 99.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:51:56 --> ErrorException: fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/projects/XOIQOA/contacts.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: project/XOIQOA]
+in APPPATH/Controllers/Project.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/projects/XOIQOA/contacts.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 42)
+ 2 APPPATH/Controllers/Project.php(42): fopen('/Users/diego/Documents/GitHub/cocada-db/public/data/projects/XOIQOA/contacts.csv', 'r')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('XOIQOA')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:52:31 --> ErrorException: fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/projects/YMOQW8/contacts.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: project/YMOQW8]
+in APPPATH/Controllers/Project.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/projects/YMOQW8/contacts.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 42)
+ 2 APPPATH/Controllers/Project.php(42): fopen('/Users/diego/Documents/GitHub/cocada-db/public/data/projects/YMOQW8/contacts.csv', 'r')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('YMOQW8')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:52:53 --> ErrorException: fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/projects/V3BBJC/contacts.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: project/V3BBJC]
+in APPPATH/Controllers/Project.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/Users/diego/Documents/GitHub/cocada-db/public/data/projects/V3BBJC/contacts.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Project.php', 42)
+ 2 APPPATH/Controllers/Project.php(42): fopen('/Users/diego/Documents/GitHub/cocada-db/public/data/projects/V3BBJC/contacts.csv', 'r')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('V3BBJC')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:59:29 --> ErrorException: fopen(./data/pdb/1/1A1M/1A1M_info.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/1A1M]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/pdb/1/1A1M/1A1M_info.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('./data/pdb/1/1A1M/1A1M_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('1A1M')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1A1M')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 18:59:52 --> ErrorException: fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 36.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 36)
+ 2 APPPATH/Controllers/Home.php(36): fopen('./data/pdb/1/1SHR/1SHR_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(83): App\Controllers\Home->getInfo('1SHR')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:01:49 --> ErrorException: fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 38.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 38)
+ 2 APPPATH/Controllers/Home.php(38): fopen('./data/pdb/1/1SHR/1SHR_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(82): App\Controllers\Home->getInfo('1SHR')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:01:52 --> ErrorException: fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 38.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 38)
+ 2 APPPATH/Controllers/Home.php(38): fopen('./data/pdb/1/1SHR/1SHR_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(82): App\Controllers\Home->getInfo('1SHR')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:01:52 --> ErrorException: fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 38.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/pdb/1/1SHR/1SHR_info.csv): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 38)
+ 2 APPPATH/Controllers/Home.php(38): fopen('./data/pdb/1/1SHR/1SHR_info.csv', 'r')
+ 3 APPPATH/Controllers/Home.php(82): App\Controllers\Home->getInfo('1SHR')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:04:38 --> TypeError: App\Controllers\Home::getInfo(): Return value must be of type array, string returned
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 40.
+ 1 APPPATH/Controllers/Home.php(90): App\Controllers\Home->getInfo('1SHR')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:05:32 --> TypeError: App\Controllers\Home::getInfo(): Return value must be of type array, string returned
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 38.
+ 1 APPPATH/Controllers/Home.php(88): App\Controllers\Home->getInfo('1SHR')
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:05:45 --> ErrorException: Undefined array key 3
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 90.
+ 1 APPPATH/Controllers/Home.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 90)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:05:46 --> ErrorException: Undefined array key 3
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 90.
+ 1 APPPATH/Controllers/Home.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 90)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:05:47 --> ErrorException: Undefined array key 3
+[Method: GET, Route: entry/1SHR]
+in APPPATH/Controllers/Home.php on line 90.
+ 1 APPPATH/Controllers/Home.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 90)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('1SHR')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 19:28:47 --> ErrorException: Undefined variable $hb
+[Method: GET, Route: entry/2LZM]
+in APPPATH/Views/entry.php on line 156.
+ 1 APPPATH/Views/entry.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hb', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 156)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(99): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2LZM')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2025-01-19 20:54:44 --> ErrorException: Undefined variable $info
+[Method: GET, Route: project/E7YPXN]
+in APPPATH/Views/project.php on line 39.
+ 1 APPPATH/Views/project.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', '/Users/diego/Documents/GitHub/cocada-db/app/Views/project.php', 39)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/project.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('project', [], true)
+ 5 APPPATH/Controllers/Project.php(58): view('project', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('E7YPXN')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')

@@ -1,0 +1,12 @@
+CRITICAL - 2024-11-15 13:34:18 --> ErrorException: fopen(/Users/diego/Documents/GitHub/cocada-web/public/data/8MEDFD/2LZM_contacts.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: project/8MEDFD]
+in APPPATH/Controllers/Project.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(/Users/diego/Documents/GitHub/cocada-web/public/data/8MEDFD/2LZM_contacts.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-web/app/Controllers/Project.php', 42)
+ 2 APPPATH/Controllers/Project.php(42): fopen('/Users/diego/Documents/GitHub/cocada-web/public/data/8MEDFD/2LZM_contacts.txt', 'r')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('8MEDFD')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')

@@ -1,0 +1,110 @@
+CRITICAL - 2025-02-07 19:50:40 --> ErrorException: Undefined variable $h1
+[Method: GET, Route: /]
+in APPPATH/Views/home.php on line 44.
+ 1 APPPATH/Views/home.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $h1', '/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php', 44)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('home')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2025-02-07 19:51:17 --> ErrorException: Undefined variable $h1
+[Method: GET, Route: /]
+in APPPATH/Views/home.php on line 44.
+ 1 APPPATH/Views/home.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $h1', '/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php', 44)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('home')
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2025-02-07 20:10:01 --> ErrorException: Undefined variable $h4
+[Method: GET, Route: /]
+in APPPATH/Views/home.php on line 100.
+ 1 APPPATH/Views/home.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $h4', '/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php', 100)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH/Controllers/Home.php(40): view('home', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2025-02-07 20:12:00 --> ErrorException: Undefined variable $h4
+[Method: GET, Route: /]
+in APPPATH/Views/home.php on line 100.
+ 1 APPPATH/Views/home.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $h4', '/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php', 100)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH/Controllers/Home.php(42): view('home', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2025-02-07 20:12:01 --> ErrorException: Undefined variable $h4
+[Method: GET, Route: /]
+in APPPATH/Views/home.php on line 100.
+ 1 APPPATH/Views/home.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $h4', '/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php', 100)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH/Controllers/Home.php(42): view('home', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2025-02-07 20:13:58 --> ParseError: syntax error, unexpected identifier "dd", expecting "case" or "default" or "}"
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 28.
+ 1 VENDORPATH/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/Users/diego/Documents/GitHub/cocada-web/vendor/composer/../../app/Controllers/Home.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Home')
+ 3 SYSTEMPATH/CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 4 SYSTEMPATH/CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2025-02-07 20:13:59 --> ParseError: syntax error, unexpected identifier "dd", expecting "case" or "default" or "}"
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 28.
+ 1 VENDORPATH/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/Users/diego/Documents/GitHub/cocada-web/vendor/composer/../../app/Controllers/Home.php')
+ 2 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Home')
+ 3 SYSTEMPATH/CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 4 SYSTEMPATH/CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2025-02-07 21:25:38 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "JavaScript(null)"
+[Method: GET, Route: entry/JavaScript%28null%29]
+in SYSTEMPATH/Router/Router.php on line 736.
+ 1 SYSTEMPATH/Router/Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('entry/JavaScript(null)')
+ 2 SYSTEMPATH/CodeIgniter.php(834): CodeIgniter\Router\Router->handle('entry/JavaScript(null)')
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')

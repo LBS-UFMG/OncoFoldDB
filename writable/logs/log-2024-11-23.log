@@ -1,0 +1,140 @@
+CRITICAL - 2024-11-23 23:28:47 --> ErrorException: fopen(./data/structures/2lzm/info.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Controllers/Home.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/structures/2lzm/info.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 35)
+ 2 APPPATH/Controllers/Home.php(35): fopen('./data/structures/2lzm/info.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(154): App\Controllers\Home->getInfo('2lzm')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:31:03 --> ErrorException: fopen(./data/structures/2lzm/rna_sequence.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Controllers/Home.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/structures/2lzm/rna_sequence.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 57)
+ 2 APPPATH/Controllers/Home.php(57): fopen('./data/structures/2lzm/rna_sequence.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(159): App\Controllers\Home->getRna('2lzm')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:31:04 --> ErrorException: fopen(./data/structures/2lzm/rna_sequence.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Controllers/Home.php on line 57.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(./data/structures/2lzm/rna_sequence.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 57)
+ 2 APPPATH/Controllers/Home.php(57): fopen('./data/structures/2lzm/rna_sequence.txt', 'r')
+ 3 APPPATH/Controllers/Home.php(159): App\Controllers\Home->getRna('2lzm')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:31:15 --> ErrorException: Undefined variable $total_results
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Views/entry.php on line 35.
+ 1 APPPATH/Views/entry.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_results', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 35)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(167): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:32:38 --> ErrorException: Undefined array key 2
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Controllers/Home.php on line 157.
+ 1 APPPATH/Controllers/Home.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', '/Users/diego/Documents/GitHub/cocada-db/app/Controllers/Home.php', 157)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:35:41 --> ErrorException: Array to string conversion
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Views/entry.php on line 35.
+ 1 APPPATH/Views/entry.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php', 35)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(126): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:35:54 --> TypeError: explode(): Argument #2 ($string) must be of type string, array given
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Views/entry.php on line 96.
+ 1 APPPATH/Views/entry.php(96): explode(',', [...])
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(126): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:37:07 --> TypeError: explode(): Argument #2 ($string) must be of type string, array given
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Views/entry.php on line 96.
+ 1 APPPATH/Views/entry.php(96): explode(',', [...])
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(126): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:37:36 --> TypeError: explode(): Argument #2 ($string) must be of type string, array given
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Views/entry.php on line 96.
+ 1 APPPATH/Views/entry.php(96): explode(',', [...])
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(126): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')
+CRITICAL - 2024-11-23 23:38:00 --> TypeError: explode(): Argument #2 ($string) must be of type string, array given
+[Method: GET, Route: entry/2lzm]
+in APPPATH/Views/entry.php on line 96.
+ 1 APPPATH/Views/entry.php(96): explode(',', [...])
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-db/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Home.php(126): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->entry('2lzm')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-db/public/index.php')

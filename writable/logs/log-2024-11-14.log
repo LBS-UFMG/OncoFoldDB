@@ -1,0 +1,194 @@
+CRITICAL - 2024-11-14 20:18:08 --> ErrorException: chdir(): No such file or directory (errno 2)
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chdir(): No such file or directory (errno 2)', '/Users/diego/Documents/GitHub/cocada-web/app/Controllers/Project.php', 18)
+ 2 APPPATH/Controllers/Project.php(18): chdir('public/data')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:18:59 --> TypeError: fwrite(): Argument #2 ($data) must be of type string, array given
+[Method: POST, Route: run]
+in APPPATH/Controllers/Project.php on line 43.
+ 1 APPPATH/Controllers/Project.php(43): fwrite(resource (stream), [...])
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:38:58 --> ErrorException: chdir(): No such file or directory (errno 2)
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Controllers/Project.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'chdir(): No such file or directory (errno 2)', '/Users/diego/Documents/GitHub/cocada-web/app/Controllers/Project.php', 18)
+ 2 APPPATH/Controllers/Project.php(18): chdir('public/data')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:39:08 --> ErrorException: fopen(../../public/data/AORN6A/status.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Controllers/Project.php on line 38.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../../public/data/AORN6A/status.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-web/app/Controllers/Project.php', 38)
+ 2 APPPATH/Controllers/Project.php(38): fopen('../../public/data/AORN6A/status.txt', 'r')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:42:08 --> ErrorException: fopen(../../public/data/AORN6A/status.txt): Failed to open stream: No such file or directory
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Controllers/Project.php on line 38.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(../../public/data/AORN6A/status.txt): Failed to open stream: No such file or directory', '/Users/diego/Documents/GitHub/cocada-web/app/Controllers/Project.php', 38)
+ 2 APPPATH/Controllers/Project.php(38): fopen('../../public/data/AORN6A/status.txt', 'r')
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:46:07 --> ErrorException: Undefined variable $id
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 5.
+ 1 APPPATH/Views/entry.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 5)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(51): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:49:52 --> ErrorException: Undefined variable $total_results
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 34.
+ 1 APPPATH/Views/entry.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total_results', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 34)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(52): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:51:36 --> ErrorException: Undefined variable $mutations
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 88.
+ 1 APPPATH/Views/entry.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mutations', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 88)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(55): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:51:57 --> ErrorException: Undefined variable $chain
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 90.
+ 1 APPPATH/Views/entry.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $chain', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 90)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(55): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:52:23 --> ErrorException: Undefined variable $chain
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 90.
+ 1 APPPATH/Views/entry.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $chain', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 90)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(55): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:53:43 --> ErrorException: Undefined variable $chain
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 90.
+ 1 APPPATH/Views/entry.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $chain', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 90)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(55): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:54:53 --> ErrorException: Undefined variable $chain
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 90.
+ 1 APPPATH/Views/entry.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $chain', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 90)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(55): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:55:54 --> ErrorException: Undefined variable $chain
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 90.
+ 1 APPPATH/Views/entry.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $chain', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 90)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(55): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
+CRITICAL - 2024-11-14 20:56:00 --> ErrorException: Undefined variable $chain
+[Method: GET, Route: project/AORN6A]
+in APPPATH/Views/entry.php on line 111.
+ 1 APPPATH/Views/entry.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $chain', '/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php', 111)
+ 2 SYSTEMPATH/View/View.php(234): include('/Users/diego/Documents/GitHub/cocada-web/app/Views/entry.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('entry', [], true)
+ 5 APPPATH/Controllers/Project.php(55): view('entry', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->id('AORN6A')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Project))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/Commands/Server/rewrite.php(49): require_once('/Users/diego/Documents/GitHub/cocada-web/public/index.php')
