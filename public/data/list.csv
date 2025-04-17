@@ -1,47 +1,47 @@
-ACVR1	Oncogene	https://pubmed.ncbi.nlm.nih.gov/24705254/	G328E	S20G
-CTNNB1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/26815163/	G34V, S33F, S33Y, S37C, S37F, S37Y, S45F, S45P, S45Y, T41A, T41I, D32G, D32N, D32Y, G34E	E226D, H720P, L640Q, N287S, P44S, P714R, S311N, S341R, S389L, A295T, A391V, C213F, C419R, D624N, D83N
-GNAQ	Oncogene, TSG, Fusion	https://pubmed.ncbi.nlm.nih.gov/21083380/	R183Q, Q209L, Q209P, Q209R	H63R, I62N, K354N, T224N
-KIT	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26973244/	V560A, V560D, V560G, W557R, D816H, D816V, D816Y, K558N, L576P, V559A, V559D, V559G	Y547N, Y774C, D131N, F229L, F848L, G610D, P41T, P456Q, S375R, S639P, T322A, V287L
-NRAS	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26985062/	G12S, G12V, G13A, G13C, G13D, G13R, G13V, Q61E, Q61H, Q61K, Q61L, Q61P, Q61R, G12A, G12C, G12D, G12R	G138E, G48S, G60V, H131R, Q43R, R97G, T148S, V188A, V8A, V9A, Y64C, A146T, A146V, A59G, D33E, D33H, E153A
-PTPN11	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=15710330,21575863,25865556,26622699,27582544,27582544,28814887	A72T, D61Y, E76A, E76G, E76K, E76V	G13D, R384H, R498W, S142N, V45I, D487Y
-AKT1	Oncogene	https://pubmed.ncbi.nlm.nih.gov/3037531/	E17K	
-HRAS	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26985062/	G12A, G12C, G12D, G12R, G12S, G12V, G13C, G13D, G13R, G13V, Q61K, Q61L, Q61R	D33N, D33Y, G75E, K88E, P34S, R123H, R68Q, S17T, S89C, V7L, A122V, A155D, D119H
-ALK	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/27573755/	F1174C, F1174I, F1174L, F1174V, F1245C, F1245I, F1245L, F1245V, R1275Q	A848S, D302N, E1241Q, G589D, L334P, R753Q, S1075N, S439R, V757M
-KRAS	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26985062/	G12A, G12C, G12D, G12R, G12S, G12V, G13A, G13C, G13D, G13R, G13S, G13V	D126E, D126V, D57N, E162Q, K176Q, L23I, L23R, P34R, R151T, T20P, T74A, V14A
-RAF1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=21424530,21577205	S257L	N140H
-RET	TSG, Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=22751117,26868437,30941048	C634F, C634G, C634R, C634W, C634Y, M918T	A472V, A496G, A510S, K662T, L923F, M848R
-AR	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26813233/	H875Y, T878A, T878S	L56Q, S220F, Y364N
-EGFR	Oncogene	https://pubmed.ncbi.nlm.nih.gov/25979928/	L858R, T790M	G312W, T847K
-ERBB2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/20719876/	D769H, D769Y, G776S, S310Y, V777L, V842I	D277N, G222D, I740T, S189C, S442L
-PDGFRA	Oncogene	https://pubmed.ncbi.nlm.nih.gov/25427437/	D842V, D846Y	L593I, P895L
-RRAS2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/36476833/	Q72L	D49N
-ATP1A1	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=19243476,23416519	L104R	
-IDH1	Oncogene	https://pubmed.ncbi.nlm.nih.gov/28711227/	R132C, R132G, R132H, R132L, R132S	D347H, I215F, L216Q, L37F, R222H, W205L
-SETBP1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=17233820,26202160,30371878,32949309	G870S	E100G
-BMPR1A	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=19438883,26274893	R480W	
-PIK3CA	Oncogene	https://pubmed.ncbi.nlm.nih.gov/16341083/	E542A, E542K, E542Q, E545A, E545D, E545G, E545K, E545Q, E545V, H1047L, H1047R, H1047Y, N345K, N345T, Q546E, Q546K, Q546L, Q546P, Q546R, R88Q	D1045Y, D352Y, E522G, G12C, G451V, H1048L, I225M, I31M, L779R, M282I, N145S, P778S, R899C, S1008P, S308F, S499F, T544N, V105I, V580A, Y343C
-SF3B1	Oncogene	https://pubmed.ncbi.nlm.nih.gov/27524419/	K666N	P418L
-BRAF	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=12068308,26200269	V600E, V600G, V600L, V600M	G464R, L185M, N581Y, S607F
-MAP2K1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/22197931/	F53L, K57E, K57N, P124L, P124Q, P124S, Q56P	A257V, H119Q, H184Q, H358Q, I204T, P162H, P322S
-SMO	Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=23348505,24651015,24859340,26950094	W535L	L243I
-TP53	TSG, fusion, oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=15688066,20182618,26672768	R175G, R175H, R175L, R248L, R248P, R248Q, R248W, R273C, R273G, R273H, R273L, R273P, R273S	E258G, E287V, H233D, L130V, L265R, L93M, M237R, N263D, R174M, S269T, T140I, T230S, V97A
-FGFR2	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=18636142,23558953	S252W	
-IDH2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/28711227/	R140L, R140Q, R140W, R172K, R172M, R172S	D54N, G55S, H273D, M219L, P213T, W164C
-BTK	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=19471023,24954503	C481S	R255P
-FGFR3	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/11429702/	R248C, S249C	A150V, A281T
-CBL	Oncogene, TSG, Fusion	https://pubmed.ncbi.nlm.nih.gov/?term=25952305,26697989	C384R, R420Q, Y371C, Y371H	L281H, Q207K, S839N, W190C
-FGFR4	Oncogene	https://pubmed.ncbi.nlm.nih.gov/19946327/	G388R	
-FLT3	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26697989/	D835A, D835E, D835H, D835N, D835V, D835Y	A447V, E672K, E767K, K568E, M908V, N289S
-MPL	Oncogene	https://pubmed.ncbi.nlm.nih.gov/31697803/	W515L	R523G
-MTOR	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26391637/	E2419K, S2215F, S2215Y	R160S, R173C, T1985K
-CDK4	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26500059/	R24C, R24H	R122C, R210P
-JAK2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26697989/	V617F	E889K
-KCNJ5	Oncogene	https://pubmed.ncbi.nlm.nih.gov/21659651/	G151R	V121F
-CREBBP	Oncogene, TSG, Fusion	https://pubmed.ncbi.nlm.nih.gov/?term=9238046,10887150	R1446C, Y1503C	A410V, P2176L
-MYC	Oncogene, Fusion	https://pubmed.ncbi.nlm.nih.gov/19029958/	P74A	P177R
-NFE2L2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/27568559/	E79K, G31R	R515T
-CRLF2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/28033648/	F232C	V244M
-GNA11	Oncogene	https://pubmed.ncbi.nlm.nih.gov/21083380/	Q209L, Q209P, R183C	L353V, S268F, V184M
-CSF3R	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26475333/	T618I	P558L
-NOTCH1	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=15472075,26168399	F1592C	
-MET	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=28603720,31097696		T621I
+ACVR1	activin A receptor, type I	Oncogene	https://pubmed.ncbi.nlm.nih.gov/24705254/	G328E	S20G
+CTNNB1	catenin (cadherin-associated protein), beta 1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/26815163/	G34V, S33F, S33Y, S37C, S37F, S37Y, S45F, S45P, S45Y, T41A, T41I, D32G, D32N, D32Y, G34E	E226D, H720P, L640Q, N287S, P44S, P714R, S311N, S341R, S389L, A295T, A391V, C213F, C419R, D624N, D83N
+GNAQ	guanine nucleotide binding protein (G protein), q polypeptide	Oncogene, TSG, Fusion	https://pubmed.ncbi.nlm.nih.gov/21083380/	R183Q, Q209L, Q209P, Q209R	H63R, I62N, K354N, T224N
+KIT	v-kit Hardy-Zuckerman 4 feline sarcoma viral oncogene homolog	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26973244/	V560A, V560D, V560G, W557R, D816H, D816V, D816Y, K558N, L576P, V559A, V559D, V559G	Y547N, Y774C, D131N, F229L, F848L, G610D, P41T, P456Q, S375R, S639P, T322A, V287L
+NRAS	neuroblastoma RAS viral (v-ras) oncogene homolog	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26985062/	G12S, G12V, G13A, G13C, G13D, G13R, G13V, Q61E, Q61H, Q61K, Q61L, Q61P, Q61R, G12A, G12C, G12D, G12R	G138E, G48S, G60V, H131R, Q43R, R97G, T148S, V188A, V8A, V9A, Y64C, A146T, A146V, A59G, D33E, D33H, E153A
+PTPN11	protein tyrosine phosphatase, non-receptor type 11	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=15710330,21575863,25865556,26622699,27582544,27582544,28814887	A72T, D61Y, E76A, E76G, E76K, E76V	G13D, R384H, R498W, S142N, V45I, D487Y
+AKT1	v-akt murine thymoma viral oncogene homolog 1	Oncogene	https://pubmed.ncbi.nlm.nih.gov/3037531/	E17K	
+HRAS	v-Ha-ras Harvey rat sarcoma viral oncogene homolog	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26985062/	G12A, G12C, G12D, G12R, G12S, G12V, G13C, G13D, G13R, G13V, Q61K, Q61L, Q61R	D33N, D33Y, G75E, K88E, P34S, R123H, R68Q, S17T, S89C, V7L, A122V, A155D, D119H
+ALK	anaplastic lymphoma kinase (Ki-1)	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/27573755/	F1174C, F1174I, F1174L, F1174V, F1245C, F1245I, F1245L, F1245V, R1275Q	A848S, D302N, E1241Q, G589D, L334P, R753Q, S1075N, S439R, V757M
+KRAS	v-Ki-ras2 Kirsten rat sarcoma 2 viral oncogene homolog	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26985062/	G12A, G12C, G12D, G12R, G12S, G12V, G13A, G13C, G13D, G13R, G13S, G13V	D126E, D126V, D57N, E162Q, K176Q, L23I, L23R, P34R, R151T, T20P, T74A, V14A
+RAF1	v-raf-1 murine leukemia viral oncogene homolog 1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=21424530,21577205	S257L	N140H
+RET	ret proto-oncogene	TSG, Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=22751117,26868437,30941048	C634F, C634G, C634R, C634W, C634Y, M918T	A472V, A496G, A510S, K662T, L923F, M848R
+AR	androgen receptor	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26813233/	H875Y, T878A, T878S	L56Q, S220F, Y364N
+EGFR	epidermal growth factor receptor (erythroblastic leukemia viral (v-erb-b) oncogene homolog, avian)	Oncogene	https://pubmed.ncbi.nlm.nih.gov/25979928/	L858R, T790M	G312W, T847K
+ERBB2	v-erb-b2 erythroblastic leukemia viral oncogene homolog 2, neuro/glioblastoma derived oncogene homolog (avian)	Oncogene	https://pubmed.ncbi.nlm.nih.gov/20719876/	D769H, D769Y, G776S, S310Y, V777L, V842I	D277N, G222D, I740T, S189C, S442L
+PDGFRA	platelet-derived growth factor, alpha-receptor	Oncogene	https://pubmed.ncbi.nlm.nih.gov/25427437/	D842V, D846Y	L593I, P895L
+RRAS2	related RAS viral (R-Ras) oncogene homolog 2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/36476833/	Q72L	D49N
+ATP1A1	ATPase, Na+/K+ transporting, alpha 1 polypeptide	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=19243476,23416519	L104R	
+IDH1	isocitrate dehydrogenase 1 (NADP+), soluble	Oncogene	https://pubmed.ncbi.nlm.nih.gov/28711227/	R132C, R132G, R132H, R132L, R132S	D347H, I215F, L216Q, L37F, R222H, W205L
+SETBP1	SET binding protein 1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=17233820,26202160,30371878,32949309	G870S	E100G
+BMPR1A	bone morphogenetic protein receptor, type IA	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=19438883,26274893	R480W	
+PIK3CA	phosphoinositide-3-kinase, catalytic, alpha polypeptide	Oncogene	https://pubmed.ncbi.nlm.nih.gov/16341083/	E542A, E542K, E542Q, E545A, E545D, E545G, E545K, E545Q, E545V, H1047L, H1047R, H1047Y, N345K, N345T, Q546E, Q546K, Q546L, Q546P, Q546R, R88Q	D1045Y, D352Y, E522G, G12C, G451V, H1048L, I225M, I31M, L779R, M282I, N145S, P778S, R899C, S1008P, S308F, S499F, T544N, V105I, V580A, Y343C
+SF3B1	splicing factor 3b, subunit 1, 155kDa	Oncogene	https://pubmed.ncbi.nlm.nih.gov/27524419/	K666N	P418L
+BRAF	v-raf murine sarcoma viral oncogene homolog B1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=12068308,26200269	V600E, V600G, V600L, V600M	G464R, L185M, N581Y, S607F
+MAP2K1	mitogen-activated protein kinase kinase 1	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/22197931/	F53L, K57E, K57N, P124L, P124Q, P124S, Q56P	A257V, H119Q, H184Q, H358Q, I204T, P162H, P322S
+SMO	smoothened homolog (drosophila)	Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=23348505,24651015,24859340,26950094	W535L	L243I
+TP53	tumor protein p53	TSG, fusion, oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=15688066,20182618,26672768	R175G, R175H, R175L, R248L, R248P, R248Q, R248W, R273C, R273G, R273H, R273L, R273P, R273S	E258G, E287V, H233D, L130V, L265R, L93M, M237R, N263D, R174M, S269T, T140I, T230S, V97A
+FGFR2	fibroblast growth factor receptor 2	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=18636142,23558953	S252W	
+IDH2	isocitrate dehydrogenase 2 (NADP+), mitochondrial	Oncogene	https://pubmed.ncbi.nlm.nih.gov/28711227/	R140L, R140Q, R140W, R172K, R172M, R172S	D54N, G55S, H273D, M219L, P213T, W164C
+BTK	bruton agammaglobulinemia tyrosine kinase	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=19471023,24954503	C481S	R255P
+FGFR3	fibroblast growth factor receptor 3	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/11429702/	R248C, S249C	A150V, A281T
+CBL	Cas-Br-M (murine) ecotropic retroviral transforming	Oncogene, TSG, Fusion	https://pubmed.ncbi.nlm.nih.gov/?term=25952305,26697989	C384R, R420Q, Y371C, Y371H	L281H, Q207K, S839N, W190C
+FGFR4	fibroblast growth factor receptor 4	Oncogene	https://pubmed.ncbi.nlm.nih.gov/19946327/	G388R	
+FLT3	fms-related tyrosine kinase 3	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26697989/	D835A, D835E, D835H, D835N, D835V, D835Y	A447V, E672K, E767K, K568E, M908V, N289S
+MPL	myeloproliferative leukaemia virus oncogene, thrombopoietin receptor	Oncogene	https://pubmed.ncbi.nlm.nih.gov/31697803/	W515L	R523G
+MTOR	mechanistic target of rapamycin	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26391637/	E2419K, S2215F, S2215Y	R160S, R173C, T1985K
+CDK4	cyclin-dependent kinase 4	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26500059/	R24C, R24H	R122C, R210P
+JAK2	janus kinase 2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26697989/	V617F	E889K
+KCNJ5	potassium inwardly rectifying channel subfamily J member 5	Oncogene	https://pubmed.ncbi.nlm.nih.gov/21659651/	G151R	V121F
+CREBBP	CREB binding protein (CBP)	Oncogene, TSG, Fusion	https://pubmed.ncbi.nlm.nih.gov/?term=9238046,10887150	R1446C, Y1503C	A410V, P2176L
+MYC	v-myc myelocytomatosis viral oncogene homolog (avian)	Oncogene, Fusion	https://pubmed.ncbi.nlm.nih.gov/19029958/	P74A	P177R
+NFE2L2	nuclear factor (erythroid-derived 2)-like 2 (NRF2)	Oncogene	https://pubmed.ncbi.nlm.nih.gov/27568559/	E79K, G31R	R515T
+CRLF2	cytokine receptor-like factor 2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/28033648/	F232C	V244M
+GNA11	guanine nucleotide binding protein (G protein), alpha 11 (Gq class)	Oncogene	https://pubmed.ncbi.nlm.nih.gov/21083380/	Q209L, Q209P, R183C	L353V, S268F, V184M
+CSF3R	colony stimulating factor 3 receptor (granulocyte)	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26475333/	T618I	P558L
+NOTCH1	notch homolog 1, translocation-associated (drosophila) (TAN1)	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=15472075,26168399	F1592C	
+MET	met proto-oncogene (hepatocyte growth factor receptor)	Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=28603720,31097696		T621I

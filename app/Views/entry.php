@@ -17,26 +17,28 @@
         <div class="row">
             <div class="col-md-9 col-xs-12 pt-2">
                 <h2 class="title_h2 pt-4">
-                    <strong><?php echo $id; ?></strong>
-                    <div class="dropdown d-inline ms-2" title="Export files">
+                    <strong><?php echo $gene_id; ?></strong>
+                    <!-- div class="dropdown d-inline ms-2" title="Export files">
                         <div class="dropdown d-inline">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Download
                             </button>
                             <ul class="dropdown-menu">
                                 <li><b class="ms-3">Unavailable<br></b></li>
-                                <!-- <li><a class="dropdown-item mt-2" href="<?php echo base_url(); ?>data/pdb/<?= substr($id, 0, 1) ?>/<?= $id ?>/<?= $id ?>_contacts.csv">Contacts</a></li>
-                                <li><a class="dropdown-item" href="https://files.rcsb.org/download/<?php echo $id; ?>.cif">PDB file</a></li> -->
+                                <li><a class="dropdown-item mt-2" href="<?php echo base_url(); ?>data/pdb/<?= substr($id, 0, 1) ?>/<?= $id ?>/<?= $id ?>_contacts.csv">Contacts</a></li>
+                                <li><a class="dropdown-item" href="https://files.rcsb.org/download/<?php echo $id; ?>.cif">PDB file</a></li>
                             </ul>
                         </div>
                     </div>
-
-                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactMap">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactMap">
                         Show contact map <i class="bi bi-image"></i>
                     </button> -->
                 </h2>
+                <h4>
+                    <?php echo $gene_name; ?>
+                </h4>
                 <div class="col">
-                    <p class="mb-0 mt-3"><strong>Total Driver mutations: </strong><?= $total_drivers ?> <span class="px-4">|</span> <strong>Total Non-driver mutations: </strong><?= $total_nondrivers ?> </p>
+                    <p class="mb-0 mt-3"><strong>Driver Mutations Count: </strong><?= count($drivers) ?> <span class="px-4">|</span> <strong>Passenger Mutations Count: </strong><?= count($nondrivers) ?> </p>
                 </div>
             </div>
 
@@ -69,34 +71,39 @@
                 <table class="display" id="mut">
                     <thead>
                         <tr>
-                            <th>Gene</th>
-                            <th>Type</th>
-                            <th>Mutation</th>
-                            <th>Download PDB</th>
+                            <th class="dt-center">Mutation (HGVS)</th>
+                            <th class="dt-center">Variant Classification</th>
+                            <th class="dt-center">PDB Download</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($drivers as $d) {  ?>
-                            <tr onclick="selectID(glviewer,this.children[0].innerHTML,1,this.children[1].innerHTML, this.children[3].innerHTML, this.children[6].innerHTML)" id="<?php echo $d; ?>">
-                                <td><?php echo $gene; ?></td>
-                                <td class="bg-danger text-white"><?php echo 'Driver'; ?></td>
-                                <td><?php echo $d; ?></td>
-                                <td class="text-center">
-                                    <a href="<?=base_url("data/mutants/$id/p$d/ranked_1.cif")?>"><i class="bi bi-arrow-down-circle-fill"></i></a>
-                                </td>
-                            </tr>
-                        <?php } ?>
+                    <?php
+                    $mutations = [];
 
-                        <?php foreach ($nondrivers as $d) {  ?>
-                            <tr onclick="selectID(glviewer,this.children[0].innerHTML,1,this.children[1].innerHTML, this.children[3].innerHTML, this.children[6].innerHTML)" id="<?php echo $d; ?>">
-                                <td><?php echo $gene; ?></td>
-                                <td class="bg-primary text-white"><?php echo 'Non-driver'; ?></td>
-                                <td><?php echo $d; ?></td>
-                                <td class="text-center">
-                                    <a href="javascript:void(0);"><i class="bi bi-arrow-down-circle-fill"></i></a>
-                                </td>
-                            </tr>
-                        <?php } ?>
+                    foreach ($drivers as $d) {
+                        $mutations[] = ['mutation' => $d, 'type' => 'Driver'];
+                    }
+
+                    foreach ($nondrivers as $d) {
+                        $mutations[] = ['mutation' => $d, 'type' => 'Passenger'];
+                    }
+
+                    foreach ($mutations as $m):
+                        $mutation = htmlspecialchars($m['mutation']);
+                        $type = $m['type'];
+                        $color = $type === 'Driver' ? 'bg-danger' : 'bg-primary';
+                    ?>
+                    
+                    <tr onclick="selectID(glviewer, this.children[0].innerHTML, 1, this.children[1].innerHTML, this.children[3]?.innerHTML ?? '', this.children[6]?.innerHTML ?? '')" id="<?= $mutation ?>">
+                        <td class="fw-semibold"><?= "p.$mutation" ?></td>
+                        <td class="<?= $color ?> text-white"><?= $type ?></td>
+                        <td class="text-center">
+                            <a href="<?= base_url("data/mutants/$id/p$mutation/ranked_1.cif") ?>">
+                                <i class="bi bi-arrow-down-circle-fill"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
@@ -186,6 +193,7 @@
 
     $(document).ready(function() {
         var table = $('#mut').DataTable({
+            order: [],
             "paging": true
         });
         
@@ -364,7 +372,7 @@
         //title_pdb = title_pdb.split(": ")
 
         // var txt = "https://files.rcsb.org/download/<?php echo $id; ?>.pdb";
-        <?php if($total_drivers > 0): ?>
+        <?php if(count($drivers) > 0): ?>
         var txt = "<?php echo base_url(); ?>data/mutants/<?php echo $id; ?>/p<?php echo $drivers[0]; ?>/ranked_1.cif";
         <?php else: ?>
         var txt = "<?php echo base_url(); ?>data/mutants/<?php echo $id; ?>/p<?php echo $nondrivers[0]; ?>/ranked_1.cif";

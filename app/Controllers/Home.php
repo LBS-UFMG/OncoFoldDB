@@ -129,11 +129,12 @@ class Home extends BaseController
         $data['total_results'] = 1;
         // pega informações de contatos
 
-        $data['gene'] = $data['info'][0];
-        $data['total_drivers'] = $data['info'][1];
-        $data['total_nondrivers'] = $data['info'][2];
-        $data['drivers'] = explode(', ', $data['info'][3]);
-        $data['nondrivers'] = explode(', ', $data['info'][4]);
+        $data['gene_id'] = $data['info'][0];
+        $data['gene_name'] = $data['info'][1];
+        $data['function'] = $data['info'][2];
+        $data['pmid'] = $data['info'][3];
+        $data['drivers'] = explode(', ', $data['info'][4]);
+        $data['nondrivers'] = explode(', ', $data['info'][5]);
 
         // $data['contacts'] = explode(',',$data['info'][0][3].','.$data['info'][0][3]);
 
