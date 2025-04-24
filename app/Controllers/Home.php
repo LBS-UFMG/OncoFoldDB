@@ -69,7 +69,7 @@ class Home extends BaseController
             return ["File not exist."];
         }
 
-        $file_handle = fopen("./data/list.csv", 'r');
+        $file_handle = fopen("./data/genes_table.csv", 'r');
         $lines = "";
         if($file_handle) {
             while (($line = fgets($file_handle)) !== false) {

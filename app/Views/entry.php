@@ -38,7 +38,7 @@
                     <?php echo $gene_name; ?>
                 </h4>
                 <div class="col">
-                    <p class="mb-0 mt-3"><strong>Driver Mutations Count: </strong><?= count($drivers) ?> <span class="px-4">|</span> <strong>Passenger Mutations Count: </strong><?= count($nondrivers) ?> </p>
+                    <p class="mb-0 mt-3"><strong>Driver Mutations Count: </strong><?= count(array_filter($drivers, fn($v) => trim($v) === '')) > 0 ? 0 : count($drivers); ?> <span class="px-4">|</span> <strong>Passenger Mutations Count: </strong><?= count(array_filter($nondrivers, fn($v) => trim($v) === '')) > 0 ? 0 : count($nondrivers); ?> </p>
                 </div>
             </div>
 
@@ -74,36 +74,33 @@
                             <th class="dt-center">Mutation (HGVS)</th>
                             <th class="dt-center">Variant Classification</th>
                             <th class="dt-center">PDB Download</th>
+                            <th class="dt-center">Reference</th><!-- NOVA COLUNA -->
                         </tr>
                     </thead>
                     <tbody>
-                    <?php
-                    $mutations = [];
+                        <?php
+                            $mutations = [];
+                            foreach ($drivers as $d)      $mutations[] = ['mutation'=>$d,'type'=>'Driver'];
+                            foreach ($nondrivers as $d)   $mutations[] = ['mutation'=>$d,'type'=>'Passenger'];
 
-                    foreach ($drivers as $d) {
-                        $mutations[] = ['mutation' => $d, 'type' => 'Driver'];
-                    }
-
-                    foreach ($nondrivers as $d) {
-                        $mutations[] = ['mutation' => $d, 'type' => 'Passenger'];
-                    }
-
-                    foreach ($mutations as $m):
-                        $mutation = htmlspecialchars($m['mutation']);
-                        $type = $m['type'];
-                        $color = $type === 'Driver' ? 'bg-danger' : 'bg-primary';
-                    ?>
-                    
-                    <tr onclick="selectID(glviewer, this.children[0].innerHTML, 1, this.children[1].innerHTML, this.children[3]?.innerHTML ?? '', this.children[6]?.innerHTML ?? '')" id="<?= $mutation ?>">
-                        <td class="fw-semibold"><?= "p.$mutation" ?></td>
-                        <td class="<?= $color ?> text-white"><?= $type ?></td>
-                        <td class="text-center">
-                            <a href="<?= base_url("data/mutants/$id/p$mutation/ranked_1.cif") ?>">
-                                <i class="bi bi-arrow-down-circle-fill"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
+                            foreach ($mutations as $m):
+                                if (trim($m['mutation'])==='') continue;
+                                $mutation = htmlspecialchars($m['mutation']);
+                                $type     = $m['type'];
+                                $color    = $type==='Driver' ? 'bg-danger' : 'bg-primary';
+                        ?>
+                        <tr onclick="selectID(glviewer, this.children[0].innerHTML, 1, this.children[1].innerHTML, this.children[3]?.innerHTML ?? '', this.children[6]?.innerHTML ?? '')"
+                            id="<?= $mutation ?>">
+                            <td class="fw-semibold"><?= "p.$mutation" ?></td>
+                            <td class="<?= $color ?> text-white"><?= $type ?></td>
+                            <td class="text-center">
+                                <a href="<?= base_url("data/mutants/$id/p$mutation/ranked_1.cif") ?>">
+                                    <i class="bi bi-download"></i>
+                                </a>
+                            </td>
+                            <td class="text-center" data-ref><!-- preenchido via JS --></td><!-- NOVA CELULA -->
+                        </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
@@ -190,6 +187,52 @@
     // loading
     $(() => setTimeout(() => $('#loading').fadeOut(), 1000));
 
+    $(() => {
+        $.get("<?= base_url('data/mutation_table.csv') ?>")
+        .done(raw => {
+            const Gene = s => s.trim().toUpperCase();
+            const Mut  = s => s.trim().replace(/^p\./i, '').toUpperCase();
+            const map = {};
+            raw.trim().split('\n').forEach(l => {
+                const [gene, mut, url] = l.split(/\s+/);
+                if (!gene || !mut || !url) return;
+                const gene_key = Gene(gene);
+                const mut_key  = Mut(mut);
+                if (!map[gene_key]) map[gene_key] = {};
+                map[gene_key][mut_key] = url;
+            });
+
+            const gene = Gene('<?= $gene_id ?>');
+
+            // DataTable Contendo as Mutações
+            function drawTable() {
+                $('#mut tbody tr').each(function () {
+                    const $cells = $(this).children('td');
+                    const mut = Mut($cells.eq(0).text());
+                    const url = map[gene]?.[mut];
+                    $cells.eq(3).html(
+                        url ? `<a target="_blank" href="${url}"><i class="bi bi-journal-text"></i></a>` : '–'
+                    );
+                });
+            }
+
+            // Inicializa DataTable
+            if (!$.fn.DataTable.isDataTable('#mut')) {
+                $('#mut').DataTable({
+                    order: [],
+                    paging: true
+                });
+            }
+
+            drawTable();
+
+            $('#mut').on('draw.dt', function () {
+                drawTable();
+            });
+
+        })
+        .fail(err => console.error('Error reading mutation_table.csv.', err));
+    });
 
     $(document).ready(function() {
         var table = $('#mut').DataTable({
@@ -233,8 +276,6 @@
         $('#show_all').click(function() {
             table.columns(9).search(".*", true, false).draw();
         });
-
-
     });
 
 

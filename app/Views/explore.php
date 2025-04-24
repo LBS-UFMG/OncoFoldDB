@@ -21,7 +21,7 @@
                     <tr class="tableheader">
                         <th class="dt-center">Gene ID</th>
                         <th class="dt-center">Cancer role</th>
-                        <th class="text-center">PMID</th>
+                        <th class="text-center">PubMed</th>
                         <th class="dt-center">Driver Mutations (COSMIC)</th>
                         <th class="dt-center">Passenger Mutations (COSMIC)</th>
                     </tr>
@@ -72,8 +72,6 @@
                 let celulas = linha.split("\t")
                 celulas[0] = `<a class="text-primary text-decoration-none fw-semibold" href="<?=base_url()?>entry/${celulas[0]}">${celulas[0]}</a>`;
                 
-                console.log(celulas)
-
                 // extrai PMID
                 const pubmedField = celulas[3];
                 let texto = "";
@@ -90,13 +88,13 @@
                     link = pmid ? `https://pubmed.ncbi.nlm.nih.gov/${pmid}/` : "";
                 }
 
-                const query = texto ? texto.split(',').join(',<wbr>') : "";
-
+                // Aqui substitui o conteúdo pelo ícone com link
                 celulas[3] = texto
-                    ? `<div class="text-start">
+                    ? `<div class="text-center">
                         <a href="${link}" target="_blank" 
-                            class="text-primary text-decoration-none fw-normal">
-                            ${query}
+                            class="text-primary text-decoration-none fw-normal"
+                            title="Ver no PubMed">
+                            <i class="bi bi-journal-text"></i>
                         </a>
                     </div>`
                     : "";
@@ -137,7 +135,7 @@
             })
         }
 
-        lerDados("<?= base_url('data/list.csv') ?>");
+        lerDados("<?= base_url('data/genes_table.csv') ?>");
 
     })
 
