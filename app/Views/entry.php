@@ -407,88 +407,62 @@
 
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
 
-        //var title_pdb = $(".title_h2").text();
-        //title_pdb = title_pdb.split(": ")
-
-        // var txt = "https://files.rcsb.org/download/<?php echo $id; ?>.pdb";
         <?php if(count($drivers) > 0): ?>
-        var txt = "<?php echo base_url(); ?>data/mutants/<?php echo $id; ?>/p<?php echo $drivers[0]; ?>/ranked_1.cif";
+        var txt = "<?php echo base_url(); ?>data/mutants/<?php echo $id; ?>/p<?php echo $drivers[0]; ?>/ranked_1.pdb";
         <?php else: ?>
-        var txt = "<?php echo base_url(); ?>data/mutants/<?php echo $id; ?>/p<?php echo $nondrivers[0]; ?>/ranked_1.cif";
+        var txt = "<?php echo base_url(); ?>data/mutants/<?php echo $id; ?>/p<?php echo $nondrivers[0]; ?>/ranked_1.pdb";
         <?php endif; ?>
 
-        $.get(txt, function(d) {
+        /* ----------------------------------------------------------
+            Função de coloração por pLDDT
+        ---------------------------------------------------------- */
+        const colorByPLDDT = function (atom) {
+            const p = atom.b;               // Coluna B-factor
+            if (p > 90)  return '#0053D6';  // Very high (pLDDT > 90)
+            if (p > 70)  return '#4DA3FF';  // High (90 > pLDDT > 70)
+            if (p > 50)  return '#FFDB4D';  // Low (70 > pLDDT > 50)
+            if (p > 30)  return '#FF7B2D';  // Very low (pLDDT < 50)
+            return '#FF4040';               
+        };
 
-            // console.log(d)
-            moldata = data = d;
+        /* ----------------------------------------------------------
+            Carrega o PDB
+        ---------------------------------------------------------- */
+        $.get(txt, function (d) {
 
-            /* Creating visualization */
-            glviewer = $3Dmol.createViewer("pdb", {
+            const glviewer = $3Dmol.createViewer("pdb", {
                 defaultcolors: $3Dmol.rasmolElementColors
             });
-
-            /* Color background */
             glviewer.setBackgroundColor(0xffffff);
 
-            receptorModel = m = glviewer.addModel(data, "cif");
+            const model = glviewer.addModel(d, "pdb");
 
-            /* Type of visualization */
-            glviewer.setStyle({}, {
-                line: {
-                    color: 'grey'
-                },
-                cartoon: {
-                    color: 'white'
-                }
-            }); /* Cartoon multi-color */
+            glviewer.setStyle({}, { cartoon: { colorfunc: colorByPLDDT } });
 
-            /*glviewer.addSurface($3Dmol.SurfaceType, {opacity:0.3});  Surface */
-
-            /* Name of the atoms */
-            atoms = m.selectedAtoms({});
-            for (var i in atoms) {
-                var atom = atoms[i];
+            const atoms = model.selectedAtoms({});
+            for (let i = 0; i < atoms.length; i++) {
+                const atom = atoms[i];
                 atom.clickable = true;
-                atom.callback = atomcallback;
+                atom.callback  = atomcallback;
             }
 
-            glviewer.mapAtomProperties($3Dmol.applyPartialCharges);
             glviewer.zoomTo();
             glviewer.render();
-
         });
 
-        var atomcallback = function(atom, viewer) {
-            if (atom.clickLabel === undefined ||
-                !atom.clickLabel instanceof $3Dmol.Label) {
-                atom.clickLabel = viewer.addLabel(atom.resn + " " + atom.resi + " (" + atom.elem + ")", {
-                    fontSize: 10,
-                    position: {
-                        x: atom.x,
-                        y: atom.y,
-                        z: atom.z
-                    },
-                    backgroundColor: "black"
-                });
+        const atomcallback = function (atom, viewer) {
+            if (!atom.clickLabel) {
+                atom.clickLabel = viewer.addLabel(
+                    `${atom.resn} ${atom.resi} (${atom.elem}) — pLDDT ${atom.b.toFixed(1)}`,
+                    { fontSize: 10, position: { x: atom.x, y: atom.y, z: atom.z }, backgroundColor: "black" });
                 atom.clicked = true;
-            }
-
-            //toggle label style
-            else {
-
-                if (atom.clicked) {
-                    var newstyle = atom.clickLabel.getStyle();
-                    newstyle.backgroundColor = 0x66ccff;
-
-                    viewer.setLabelStyle(atom.clickLabel, newstyle);
-                    atom.clicked = !atom.clicked;
-                } else {
-                    viewer.removeLabel(atom.clickLabel);
-                    delete atom.clickLabel;
-                    atom.clicked = false;
-                }
+            } else {
+                // alterna entre apagar e destacar rótulo
+                viewer.removeLabel(atom.clickLabel);
+                atom.clickLabel = undefined;
+                atom.clicked = false;
             }
         };
     });
