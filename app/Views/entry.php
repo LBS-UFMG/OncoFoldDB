@@ -88,13 +88,14 @@
                                 $mutation = htmlspecialchars($m['mutation']);
                                 $type     = $m['type'];
                                 $color    = $type==='Driver' ? 'bg-danger' : 'bg-primary';
+                                $pdb_path = $type==='Driver' ? 'drivers' : 'non-drivers';
                         ?>
                         <tr onclick="selectID(glviewer, this.children[0].innerHTML, 1, this.children[1].innerHTML, this.children[3]?.innerHTML ?? '', this.children[6]?.innerHTML ?? '')"
                             id="<?= $mutation ?>">
                             <td class="fw-semibold"><?= "p.$mutation" ?></td>
                             <td class="<?= $color ?> text-white"><?= $type ?></td>
                             <td class="text-center">
-                                <a href="<?= base_url("data/mutants/$id/p$mutation/ranked_1.cif") ?>">
+                                <a href="<?= base_url("data/models/$pdb_path/$id/p$mutation/ranked_0.pdb") ?>">
                                     <i class="bi bi-download"></i>
                                 </a>
                             </td>
@@ -410,9 +411,9 @@
     $(document).ready(function () {
 
         <?php if(count($drivers) > 0): ?>
-        var txt = "<?php echo base_url(); ?>data/mutants/<?php echo $id; ?>/p<?php echo $drivers[0]; ?>/ranked_1.pdb";
+        var txt = "<?php echo base_url(); ?>data/models/drivers/<?php echo $id; ?>/p<?php echo $drivers[0]; ?>/ranked_0.pdb";
         <?php else: ?>
-        var txt = "<?php echo base_url(); ?>data/mutants/<?php echo $id; ?>/p<?php echo $nondrivers[0]; ?>/ranked_1.pdb";
+        var txt = "<?php echo base_url(); ?>data/models/non-drivers/<?php echo $id; ?>/p<?php echo $nondrivers[0]; ?>/ranked_0.pdb";
         <?php endif; ?>
 
         /* ----------------------------------------------------------
