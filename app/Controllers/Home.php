@@ -63,11 +63,11 @@ class Home extends BaseController
 
     private function getInfo($id): Array 
     {
-        $url = "./data/mutants/$id";
+        // $url = "./data/mutants/$id";
 
-        if (!file_exists($url)) {
-            return ["File not exist."];
-        }
+        // if (!file_exists($url)) {
+        //    return ["File not exist."];
+        // }
 
         $file_handle = fopen("./data/genes_table.csv", 'r');
         $lines = "";

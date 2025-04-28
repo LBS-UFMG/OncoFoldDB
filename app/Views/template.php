@@ -62,7 +62,7 @@
                     <!-- <img src="<?= base_url('/img/cocada.svg') ?>" width="200px"> -->
                     <p class="text-light small pt-3 col-9">OncoFoldDB</p>
 
-                    <p style="font-size: 0.6em;color:#ccc">©<?=date('Y')?>OncoFoldDB v2.5.427 | Laboratory of Bioinformatics and Systems, UFMG (Brazil) | <a class="text-white" href="https://github.com/LBS-UFMG/cocada">GitHub</a>
+                    <p style="font-size: 0.6em;color:#ccc">©<?=date('Y')?>OncoFoldDB v2.5.428 | Laboratory of Bioinformatics and Systems, UFMG (Brazil) | <a class="text-white" href="https://github.com/LBS-UFMG/cocada">GitHub</a>
                 </div>
 
                 <div class="col-12 col-md-6">
