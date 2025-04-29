@@ -202,8 +202,7 @@
 
         // Reset whole model
         glviewer.setStyle({}, {
-            cartoon: { colorfunc: colorByPLDDT },
-            line:    { color: 'grey' }
+            cartoon: { colorfunc: colorByPLDDT}, // opacity:0.8 
         });
 
         // Highlight selected residue
