@@ -184,25 +184,60 @@
         General functions
     ------------------------------------------------------------------------ */
 
-    // Highlight a given row
     let currentSel = null;
-    window.highlightResidue = function(idx) {
-        const resi = idx + 1;  // índice da sequência (0-based) para PDB (1-based)
+    let currentSpan = null;
+    let currentLabel = null;
 
-        // Remove estilo anterior do resíduo selecionado
-        if (currentSel) {
-            glviewer.setStyle(currentSel, null); // limpa apenas o estilo do anterior
+    window.highlightResidue = function(idx) {
+        const resi = idx + 1;
+
+        // Remove estilo anterior no modelo
+        if (currentSel) glviewer.setStyle(currentSel, {});
+        if (currentLabel) {
+            glviewer.removeLabel(currentLabel);
+            currentLabel = null;
         }
 
-        // Define novo estilo realista por átomo
+        // Remove destaque anterior na sequência
+        if (currentSpan) currentSpan.classList.remove('selected');
+
+        // Atualiza estilo da estrutura
         currentSel = { resi: resi, chain: 'A' };
         glviewer.setStyle(currentSel, {
-            sphere: { radius: 0.4, colorscheme: 'default' },
-            stick:  { radius: 0.2, colorscheme: 'default' }
+            stick: { radius: 0.2, colorscheme: 'default' }
         });
+
+        // Criar o label no átomo clicado
+        const model = glviewer.getModel();
+        const atoms = model.selectedAtoms(currentSel);
+        if (atoms.length > 0) {
+            const atom = atoms[0];
+            const resName = atom.resn;
+            const resNum = atom.resi;
+            const plddt = atom.b ? atom.b.toFixed(1) : 'N/A';
+
+            const labelText = `${resName} ${resNum}\npLDDT: ${plddt}`;
+
+            currentLabel = glviewer.addLabel(labelText, {
+                fontSize: 12,
+                fontColor: 'black',
+                backgroundColor: 'white',
+                backgroundOpacity: 0.8,
+                inFront: true,
+                position: { x: atom.x, y: atom.y, z: atom.z + 1.5 }  // ligeiramente acima
+            });
+        }
 
         glviewer.zoomTo(currentSel);
         glviewer.render();
+
+        // Atualiza destaque na sequência
+        const span = document.getElementById(`res${idx}`);
+        if (span) {
+            span.classList.add('selected');
+            span.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            currentSpan = span;
+        }
     };
 
     // Fade out loading screen
@@ -241,76 +276,60 @@
     --------------------------------------------------------------------- */
     $(document).ready(function () {
 
-// ---------------------------------------------------------------------
-// URLs do modelo
-// ---------------------------------------------------------------------
-<?php if (count($drivers) > 0): ?>
-const pdbURL  = "<?= base_url(); ?>data/models/drivers/<?= $id; ?>/p<?= $drivers[0]; ?>/ranked_0.pdb";
-<?php else: ?>
-const pdbURL  = "<?= base_url(); ?>data/models/non-drivers/<?= $id; ?>/p<?= $nondrivers[0]; ?>/ranked_0.pdb";
-<?php endif; ?>
-
-// ---------------------------------------------------------------------
-// Carrega PDB e sequência, depois inicializa visor
-// ---------------------------------------------------------------------
-$.get(pdbURL).done(data => {
-
-    /* -- 1. cria o visor 3D ----------------------------------------- */
-    glviewer = $3Dmol.createViewer("pdb", { backgroundColor:'#fff' });
-    const model = glviewer.addModel(data, "pdb");
-    glviewer.setStyle({}, { cartoon:{ colorfunc:colorByPLDDT } });
-    glviewer.zoomTo();
-    glviewer.render();
-
-    /* -- 2. extrai sequência do modelo ------------------------------ */
-    const atoms = model.selectedAtoms({});
-    const seq   = [];                    // 0-based array de letras
-    atoms.forEach(a => {
-        const i = a.resi - 1;            // resi é 1-based
-        seq[i]  = a.resn[0];             // pega 1ª letra do resn
-    });
-    const sequence = seq.join('');
-
-    /* -- 3. exibe sequência como spans clicáveis -------------------- */
-    renderSequence(sequence);            // definida abaixo
-    $('#seq_box').show();                // torna visível
-    });
+    // ---------------------------------------------------------------------
+    // URLs do modelo
+    // ---------------------------------------------------------------------
+    <?php if (count($drivers) > 0): ?>
+    const pdbURL  = "<?= base_url(); ?>data/models/drivers/<?= $id; ?>/p<?= $drivers[0]; ?>/ranked_0.pdb";
+    <?php else: ?>
+    const pdbURL  = "<?= base_url(); ?>data/models/non-drivers/<?= $id; ?>/p<?= $nondrivers[0]; ?>/ranked_0.pdb";
+    <?php endif; ?>
 
     // ---------------------------------------------------------------------
-    // Destacar resíduo (por índice da sequência)
+    // Carrega PDB e sequência, depois inicializa visor
     // ---------------------------------------------------------------------
-    let currentSel = null;
-    window.highlightResidue = function(idx){        // exposto p/ onclick
-        const resi = idx + 1;                       // 0-based → 1-based
-        if(currentSel) glviewer.setStyle(currentSel,{}); // limpa
+    $.get(pdbURL).done(data => {
 
-        currentSel = {resi:resi, chain:'A'};
-        glviewer.setStyle(currentSel,{
-            stick: {colorscheme: 'whiteCarbon'}
-        });
-        glviewer.zoomTo(currentSel);
+        /* -- 1. cria o visor 3D ----------------------------------------- */
+        glviewer = $3Dmol.createViewer("pdb", { backgroundColor:'#fff' });
+        const model = glviewer.addModel(data, "pdb");
+        glviewer.setStyle({}, { cartoon:{ colorfunc:colorByPLDDT } });
+        glviewer.zoomTo();
         glviewer.render();
-    };
 
-    // ---------------------------------------------------------------------
-    // Gera HTML da sequência (divide 10/60 car.)
-    // ---------------------------------------------------------------------
-    function renderSequence(seq) {
-    let html = '';
-    for (let i = 0; i < seq.length; i++) {
-        html += `<span onclick="highlightResidue(${i})"
-                      id="res${i}"
-                      title="Residue ${i + 1}">${seq[i]}</span>`;
+        /* -- 2. extrai sequência do modelo ------------------------------ */
+        const atoms = model.selectedAtoms({});
+        const seq   = [];                    // 0-based array de letras
+        atoms.forEach(a => {
+            const i = a.resi - 1;            // resi é 1-based
+            seq[i]  = a.resn[0];             // pega 1ª letra do resn
+        });
+        const sequence = seq.join('');
 
-        // Espaçamento entre blocos de 10 resíduos
-        if ((i + 1) % 10 === 0) html += ' ';
+        /* -- 3. exibe sequência como spans clicáveis -------------------- */
+        renderSequence(sequence);            // definida abaixo
+        $('#seq_box').show();                // torna visível
+        });
 
-        // Quebra de linha a cada 60
-        if ((i + 1) % 50 === 0) html += '\n';
-    }
-    $('#seq_box').html(html);
-    }
-});
+        // ---------------------------------------------------------------------
+        // Gera HTML da sequência (divide 10/60 car.)
+        // ---------------------------------------------------------------------
+        function renderSequence(seq) {
+        let html = '';
+        for (let i = 0; i < seq.length; i++) {
+            html += `<span onclick="highlightResidue(${i})"
+                        id="res${i}"
+                        title="Residue ${i + 1}">${seq[i]}</span>`;
+
+            // Espaçamento entre blocos de 10 resíduos
+            if ((i + 1) % 10 === 0) html += ' ';
+
+            // Quebra de linha a cada 60
+            if ((i + 1) % 50 === 0) html += '\n';
+        }
+        $('#seq_box').html(html);
+        }
+    });
 
 </script>
 
