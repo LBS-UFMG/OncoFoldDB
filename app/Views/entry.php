@@ -98,8 +98,13 @@
             </style>
 
             <div data-spy="affix" id="affix" data-offset-top="240" data-offset-bottom="250">
+            <div id="seq_box"
+                 style="font-family:monospace;white-space:pre-wrap;
+                        max-height:140px;overflow-y:auto;cursor:pointer;
+                        border:1px solid #ddd;padding:4px;margin-bottom:8px;
+                        display:none"></div>
                 <div id="pdb" style="min-height: 400px; height: 50vh; min-width:280px; width: 100%"></div>
-                <p style="color:#ccc; text-align:right;">Wild protein</p>
+                <p style="color:#ccc; text-align:right;">AlphaFold Model</p>
             </div>
         </div>
     </div>
@@ -180,9 +185,25 @@
     ------------------------------------------------------------------------ */
 
     // Highlight a given row
-    function highlight(pos) {
-        $(pos).css("background-color", "#f2dede");
-    }
+    let currentSel = null;
+    window.highlightResidue = function(idx) {
+        const resi = idx + 1;  // índice da sequência (0-based) para PDB (1-based)
+
+        // Remove estilo anterior do resíduo selecionado
+        if (currentSel) {
+            glviewer.setStyle(currentSel, null); // limpa apenas o estilo do anterior
+        }
+
+        // Define novo estilo realista por átomo
+        currentSel = { resi: resi, chain: 'A' };
+        glviewer.setStyle(currentSel, {
+            sphere: { radius: 0.4, colorscheme: 'default' },
+            stick:  { radius: 0.2, colorscheme: 'default' }
+        });
+
+        glviewer.zoomTo(currentSel);
+        glviewer.render();
+    };
 
     // Fade out loading screen
     $(() => setTimeout(() => $('#loading').fadeOut(), 1000));
@@ -200,9 +221,9 @@
         const resiNum = (residue.match(/\d+/) || [])[0];
         if (!resiNum) return;
 
-        // Reset whole model
+        // Reset model
         glviewer.setStyle({}, {
-            cartoon: { colorfunc: colorByPLDDT}, // opacity:0.8 
+            cartoon: { colorfunc: colorByPLDDT} // opacity:0.8
         });
 
         // Highlight selected residue
@@ -219,50 +240,113 @@
        Load initial PDB
     --------------------------------------------------------------------- */
     $(document).ready(function () {
-        <?php if (count($drivers) > 0): ?>
-            const pdbURL = "<?= base_url(); ?>data/models/drivers/<?= $id; ?>/p<?= $drivers[0]; ?>/ranked_0.pdb";
-        <?php else: ?>
-            const pdbURL = "<?= base_url(); ?>data/models/non-drivers/<?= $id; ?>/p<?= $nondrivers[0]; ?>/ranked_0.pdb";
-        <?php endif; ?>
 
-        $.get(pdbURL, function (data) {
-            glviewer = $3Dmol.createViewer("pdb", {
-                defaultcolors: $3Dmol.rasmolElementColors,
-            });
+// ---------------------------------------------------------------------
+// URLs do modelo
+// ---------------------------------------------------------------------
+<?php if (count($drivers) > 0): ?>
+const pdbURL  = "<?= base_url(); ?>data/models/drivers/<?= $id; ?>/p<?= $drivers[0]; ?>/ranked_0.pdb";
+<?php else: ?>
+const pdbURL  = "<?= base_url(); ?>data/models/non-drivers/<?= $id; ?>/p<?= $nondrivers[0]; ?>/ranked_0.pdb";
+<?php endif; ?>
 
-            glviewer.setBackgroundColor(0xffffff);
-            const model = glviewer.addModel(data, "pdb");
-            glviewer.setStyle({}, { cartoon: { colorfunc: colorByPLDDT } });
+// ---------------------------------------------------------------------
+// Carrega PDB e sequência, depois inicializa visor
+// ---------------------------------------------------------------------
+$.get(pdbURL).done(data => {
 
-            // Make atoms clickable
-            const atoms = model.selectedAtoms({});
-            const atomCallback = function (atom, viewer) {
-                if (!atom.clickLabel) {
-                    atom.clickLabel = viewer.addLabel(
-                        `${atom.resn} ${atom.resi} (${atom.elem}) — pLDDT ${atom.b.toFixed(1)}`,
-                        {
-                            fontSize: 10,
-                            position: { x: atom.x, y: atom.y, z: atom.z },
-                            backgroundColor: "black"
-                        }
-                    );
-                    atom.clicked = true;
-                } else {
-                    viewer.removeLabel(atom.clickLabel);
-                    delete atom.clickLabel;
-                    atom.clicked = false;
-                }
-            };
-            atoms.forEach(atom => {
-                atom.clickable = true;
-                atom.callback  = atomCallback;
-            });
+    /* -- 1. cria o visor 3D ----------------------------------------- */
+    glviewer = $3Dmol.createViewer("pdb", { backgroundColor:'#fff' });
+    const model = glviewer.addModel(data, "pdb");
+    glviewer.setStyle({}, { cartoon:{ colorfunc:colorByPLDDT } });
+    glviewer.zoomTo();
+    glviewer.render();
 
-            glviewer.zoomTo();
-            glviewer.render();
-        });
+    /* -- 2. extrai sequência do modelo ------------------------------ */
+    const atoms = model.selectedAtoms({});
+    const seq   = [];                    // 0-based array de letras
+    atoms.forEach(a => {
+        const i = a.resi - 1;            // resi é 1-based
+        seq[i]  = a.resn[0];             // pega 1ª letra do resn
     });
+    const sequence = seq.join('');
+
+    /* -- 3. exibe sequência como spans clicáveis -------------------- */
+    renderSequence(sequence);            // definida abaixo
+    $('#seq_box').show();                // torna visível
+    });
+
+    // ---------------------------------------------------------------------
+    // Destacar resíduo (por índice da sequência)
+    // ---------------------------------------------------------------------
+    let currentSel = null;
+    window.highlightResidue = function(idx){        // exposto p/ onclick
+        const resi = idx + 1;                       // 0-based → 1-based
+        if(currentSel) glviewer.setStyle(currentSel,{}); // limpa
+
+        currentSel = {resi:resi, chain:'A'};
+        glviewer.setStyle(currentSel,{
+            stick: {colorscheme: 'whiteCarbon'}
+        });
+        glviewer.zoomTo(currentSel);
+        glviewer.render();
+    };
+
+    // ---------------------------------------------------------------------
+    // Gera HTML da sequência (divide 10/60 car.)
+    // ---------------------------------------------------------------------
+    function renderSequence(seq) {
+    let html = '';
+    for (let i = 0; i < seq.length; i++) {
+        html += `<span onclick="highlightResidue(${i})"
+                      id="res${i}"
+                      title="Residue ${i + 1}">${seq[i]}</span>`;
+
+        // Espaçamento entre blocos de 10 resíduos
+        if ((i + 1) % 10 === 0) html += ' ';
+
+        // Quebra de linha a cada 60
+        if ((i + 1) % 50 === 0) html += '\n';
+    }
+    $('#seq_box').html(html);
+    }
+});
+
 </script>
+
+<style>
+    #seq_box {
+        font-family: 'Courier New', monospace;
+        white-space: pre-wrap;
+        background-color: #fcfcfc;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 12px 16px;
+        max-height: 160px;
+        overflow-y: auto;
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 0.2px;
+    }
+
+    #seq_box span {
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 1px 2px;
+        transition: background-color 0.2s;
+    }
+
+    #seq_box span:hover {
+        background-color: #e3f0ff;
+    }
+
+    #seq_box span.selected {
+        background-color: #ffdddd;
+        font-weight: bold;
+        color: #a00000;
+    }
+</style>
+
 
 <?= $this->endSection() ?>
 

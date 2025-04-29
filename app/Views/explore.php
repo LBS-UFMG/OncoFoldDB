@@ -1,17 +1,16 @@
 <?= $this->extend('template') ?>
 <?= $this->section('conteudo') ?>
-<!-- Conteúdo personalizado -->
 
+<!-- Custom content -->
 <div id="loading">
     <div class="text-center">
-        <img src="<?=base_url('/img/cocadito-loading.png')?>" width="200px"><br>
+        <img src="<?= base_url('/img/cocadito-loading.png') ?>" width="200px"><br>
         <div class="spinner-border spinner-border-sm" role="status"></div>
         <strong class="ms-2">Loading...</strong>
     </div>
 </div>
 
 <div class="container-fluid py-4 px-5">
-
     <h1 class="pb-5 text-dark">Genes</h1>
 
     <div id="explore">
@@ -26,14 +25,12 @@
                         <th class="dt-center">Passenger Mutations (COSMIC)</th>
                     </tr>
                 </thead>
-                <tbody>
-                </tbody>
+                <tbody></tbody>
             </table>
         </div>
     </div>
-
 </div>
-<!-- / FIM Conteúdo personalizado -->
+
 <?= $this->endSection() ?>
 
 
@@ -41,115 +38,98 @@
 <script>
     $(() => {
 
-        const lerDados = (arquivo) => {
-
-            // ler arquivo usando jQuery
+        // Load data file via jQuery
+        const loadData = (file) => {
             $.ajax({
-                url: arquivo,
-                success: (dados) => {
-                    dados_formatados = formatarTabela(dados)
-
-                    plotar(dados_formatados)
+                url: file,
+                success: (content) => {
+                    const formattedData = formatTable(content);
+                    renderTable(formattedData);
                 }
             });
         }
 
-        // formatar tabela --> INÍCIO 
-        const formatarTabela = (dados) => {
+        // Format table content
+        const formatTable = (rawData) => {
+            const tableData = [];
+            const lines = rawData.split("\n");
 
-            let dados_tabelados = [];
+            for (let line of lines) {
+                line = line.replace("\r", ""); // clean carriage return
 
-            // separa as linhas
-            let linhas = dados.split("\n")
+                const cells = line.split("\t");
 
-            // para cada linha
-            for (let linha of linhas) {
+                // Gene ID
+                cells[0] = `<a class="text-primary text-decoration-none fw-semibold" href="<?= base_url() ?>entry/${cells[0]}">${cells[0]}</a>`;
 
-                // remove caracteres especiais 
-                linha = linha.replace("\r", "")
-
-                // separa as células
-                let celulas = linha.split("\t")
-                celulas[0] = `<a class="text-primary text-decoration-none fw-semibold" href="<?=base_url()?>entry/${celulas[0]}">${celulas[0]}</a>`;
-                
-                // extrai PMID
-                const pubmedField = celulas[3];
-                let texto = "";
-                let link = "";
+                // Extract PubMed link from column 4
+                const pubmedField = cells[3];
+                let displayText = "", link = "";
 
                 if (pubmedField && pubmedField.includes("/?term=")) {
                     const pmidList = pubmedField.split("?term=")[1];
-                    texto = pmidList || "";
+                    displayText = pmidList || "";
                     link = pubmedField;
                 } else if (pubmedField) {
-                    const pmidMatch = pubmedField.match(/pubmed\.ncbi\.nlm\.nih\.gov\/(\d+)/);
-                    const pmid = pmidMatch ? pmidMatch[1] : "";
-                    texto = pmid;
+                    const match = pubmedField.match(/pubmed\.ncbi\.nlm\.nih\.gov\/(\d+)/);
+                    const pmid = match ? match[1] : "";
+                    displayText = pmid;
                     link = pmid ? `https://pubmed.ncbi.nlm.nih.gov/${pmid}/` : "";
                 }
 
-                // Aqui substitui o conteúdo pelo ícone com link
-                celulas[3] = texto
+                cells[3] = displayText
                     ? `<div class="text-center">
                         <a href="${link}" target="_blank" 
-                            class="text-primary text-decoration-none fw-normal"
-                            title="Ver no PubMed">
+                           class="text-primary text-decoration-none fw-normal"
+                           title="View on PubMed">
                             <i class="bi bi-journal-text"></i>
                         </a>
                     </div>`
                     : "";
 
-                dados_tabelados.push([
-                    celulas[0],
-                    celulas[2],
-                    celulas[3],
-                    celulas[4],
-                    celulas[5]
+                tableData.push([
+                    cells[0],
+                    cells[2],
+                    cells[3],
+                    cells[4],
+                    cells[5]
                 ]);
             }
 
-            return dados_tabelados
+            return tableData;
         }
-        // formatar tabela --> FIM 
 
-
-        // plotando a tabela
-        const plotar = (dados) => {
-
-            console.log(dados)
-
-            // ativar datatable
+        // Render DataTable
+        const renderTable = (data) => {
             $("#table_explore").DataTable({
-                "data": dados,
+                data: data,
                 autoWidth: false,
                 columnDefs: [
-                    { width: '10%', targets: 0 },   
-                    { width: '15%', targets: 1 },   
-                    { width: '15%', targets: 2 },   
-                    { width: '30%', targets: 3 }, 
-                    { width: '30%', targets: 4 }  
+                    { width: '10%', targets: 0 },
+                    { width: '15%', targets: 1 },
+                    { width: '15%', targets: 2 },
+                    { width: '30%', targets: 3 },
+                    { width: '30%', targets: 4 }
                 ]
-                // "order": [
-                //     [0, 'asc']
-                // ] // ordena pela coluna 0
-            })
+                // Uncomment to enable sorting by first column
+                // order: [[0, 'asc']]
+            });
         }
 
-        lerDados("<?= base_url('data/genes_table.csv') ?>");
+        // Load CSV file with gene mutation data
+        loadData("<?= base_url('data/genes_table.csv') ?>");
+    });
 
-    })
-
-    
+    // Hide loading screen after delay
+    $(() => setTimeout(() => $('#loading').fadeOut(), 1000));
 </script>
 <?= $this->endSection() ?>
 
+
 <?= $this->section('scripts') ?>
-
 <script>
-        $(()=>setTimeout(() => $('#loading').fadeOut(), 1000));
-
-// tooltips
+    // Bootstrap tooltips activation
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
 </script>
 <?= $this->endSection() ?>
