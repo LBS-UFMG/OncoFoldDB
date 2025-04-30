@@ -70,10 +70,7 @@
                         ?>
                         <tr onclick="selectID(glviewer,
                                               this.children[0].innerHTML,
-                                              1,
-                                              this.children[1].innerHTML,
-                                              this.children[3]?.innerHTML ?? '',
-                                              this.children[6]?.innerHTML ?? '')"
+                                              this.children[1].innerHTML)"
                             id="<?= $mutation ?>">
                             <td class="fw-semibold"><?= "p.$mutation" ?></td>
                             <td class="<?= $color ?> text-white"><?= $type ?></td>
@@ -100,7 +97,7 @@
             <div data-spy="affix" id="affix" data-offset-top="240" data-offset-bottom="250">
             <div id="seq_box"
                  style="font-family:monospace;white-space:pre-wrap;
-                        max-height:140px;overflow-y:auto;cursor:pointer;
+                        max-height:130px;overflow-y:auto;cursor:pointer;
                         border:1px solid #ddd;padding:4px;margin-bottom:8px;
                         display:none"></div>
                 <div id="pdb" style="min-height: 400px; height: 50vh; min-width:280px; width: 100%"></div>
@@ -188,24 +185,23 @@
     let currentSpan = null;
     let currentLabel = null;
 
-    window.highlightResidue = function(idx) {
+    function selectResidue(idx) {
         const resi = idx + 1;
 
+        // Clear previous styles
         if (currentSel) glviewer.setStyle(currentSel, {});
         if (currentLabel) {
             glviewer.removeLabel(currentLabel);
             currentLabel = null;
         }
-
         if (currentSpan) currentSpan.classList.remove('selected');
 
-        // Update style
+        // Apply selection style
         currentSel = { resi: resi, chain: 'A' };
         glviewer.setStyle(currentSel, {
             stick: { radius: 0.2, colorscheme: 'default' }
         });
 
-        // Create label
         const model = glviewer.getModel();
         const atoms = model.selectedAtoms(currentSel);
         if (atoms.length > 0) {
@@ -214,8 +210,8 @@
             const resNum = atom.resi;
             const plddt = atom.b ? atom.b.toFixed(1) : 'N/A';
 
+            // Add label with residue info
             const labelText = `${resName} ${resNum}\npLDDT: ${plddt}`;
-
             currentLabel = glviewer.addLabel(labelText, {
                 fontSize: 12,
                 fontColor: 'black',
@@ -229,13 +225,45 @@
         glviewer.zoomTo(currentSel);
         glviewer.render();
 
+        // Highlight sequence in HTML
         const span = document.getElementById(`res${idx}`);
         if (span) {
             span.classList.add('selected');
             span.scrollIntoView({ behavior: 'smooth', block: 'center' });
             currentSpan = span;
         }
-    };
+    }
+
+    function renderSequence(seq) {
+        const lineLength = 60;
+        const blockSize = 10;
+        let html = '';
+
+        for (let i = 0; i < seq.length; i += lineLength) {
+            const line = seq.slice(i, i + lineLength);
+
+            // Position header
+            let header = '';
+            for (let j = blockSize; j <= line.length; j += blockSize) {
+                const pos = i + j;
+                header += ' '.repeat(blockSize - String(pos).length) + '   ' + pos + ' ';
+            }
+            html += `<div class="seq-header">${header.trimEnd()}</div>`;
+
+            // Protein sequence
+            let seqLine = '';
+            for (let j = 0; j < line.length; j++) {
+                const globalIdx = i + j;
+                seqLine += `<span id="res${globalIdx}" onclick="selectResidue(${globalIdx})"
+                            title="Residue ${globalIdx + 1}">${line[j]}</span>`;
+                if ((j + 1) % blockSize === 0) seqLine += ' ';
+            }
+
+            html += `<div>${seqLine.trimEnd()}</div>`;
+        }
+
+        $('#seq_box').html(html);
+    }
 
     // Fade out loading screen
     $(() => setTimeout(() => $('#loading').fadeOut(), 1000));
@@ -246,26 +274,81 @@
     /* ---------------------------------------------------------------------
        3Dmol: select a residue by HGVS string
     --------------------------------------------------------------------- */
-    function selectID(glviewer, residue /* p.X123Y */, type, chain) {
+
+    function selectID(glviewer, residue, type) {
         if (!glviewer) return;
 
-        residue = residue.replace(/^p\./i, '');   // remove "p." prefix
-        const resiNum = (residue.match(/\d+/) || [])[0];
+        residue = residue.replace(/^p\./i, '');
+        const resiNum = parseInt((residue.match(/\d+/) || [])[0]);
         if (!resiNum) return;
 
-        // Reset model
-        glviewer.setStyle({}, {
-            cartoon: { colorfunc: colorByPLDDT} // opacity:0.8
+        // Clear previous styles
+        if (currentSel) glviewer.setStyle(currentSel, {});
+        if (currentLabel) {
+            glviewer.removeLabel(currentLabel);
+            currentLabel = null;
+        }
+        if (currentSpan) {
+            currentSpan.classList.remove('selected');
+            currentSpan = null;
+        }
+
+        // Apply selection style
+        const selection = { resi: resiNum, chain: 'A' };
+        currentSel = selection;
+        glviewer.setStyle(selection, {
+            stick: { radius: 0.2, colorscheme: 'default' }
         });
 
-        // Highlight selected residue
-        glviewer.setStyle(
-            { resi: resiNum, chain: 'A' },
-            { stick: { colorscheme: 'whiteCarbon' } }
-        );
+        const model = glviewer.getModel();
+        const atoms = model.selectedAtoms(selection);
+        if (atoms.length > 0) {
+            const atom = atoms[0];
+            const resName = atom.resn;
+            const resNum = atom.resi;
+            const plddt = atom.b ? atom.b.toFixed(1) : 'N/A';
 
-        glviewer.zoomTo({ resi: resiNum, chain: 'A' });
+            // Add label with residue info
+            const labelText = `${resName} ${resNum}\npLDDT: ${plddt}`;
+            currentLabel = glviewer.addLabel(labelText, {
+                fontSize: 12,
+                fontColor: 'black',
+                backgroundColor: 'white',
+                backgroundOpacity: 0.8,
+                inFront: true,
+                position: { x: atom.x, y: atom.y, z: atom.z + 1.5 }
+            });
+        }
+
+        glviewer.zoomTo(selection);
         glviewer.render();
+
+        const gene = "<?= $id ?>";
+        const mut = residue;
+        const fastaPath = (type.trim().toLowerCase() === 'driver') ? 'drivers' : 'non-drivers';
+        const fastaURL = `<?= base_url() ?>data/fastas/${fastaPath}/${gene}_mutated_p${mut}.fasta`;
+
+        $.get(fastaURL).done(fasta => {
+            const lines = fasta.trim().split('\n');
+            const sequence = lines.slice(1).join('').trim();
+
+            // Render sequence
+            renderSequence(sequence);
+
+            // Update the DOM
+            setTimeout(() => {
+                const span = document.getElementById(`res${resiNum - 1}`);
+                if (span) {
+                    span.classList.add('selected');
+                    span.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    currentSpan = span;
+                }
+            }, 1);
+
+            $('#seq_box').show();
+        }).fail(() => {
+            $('#seq_box').html('<i style="color:#a00">FASTA not found for selected mutation.</i>');
+        });
     }
 
     /* ---------------------------------------------------------------------
@@ -311,36 +394,6 @@
         // ---------------------------------------------------------------------
         // Gera HTML da sequência (divide 10/60 car.)
         // ---------------------------------------------------------------------
-        function renderSequence(seq) {
-            const lineLength = 60;
-            const blockSize = 10;
-            let html = '';
-
-            for (let i = 0; i < seq.length; i += lineLength) {
-                const line = seq.slice(i, i + lineLength);
-
-                // Cabeçalho de posições alinhado ao fim do bloco
-                let header = '';
-                for (let j = blockSize; j <= line.length; j += blockSize) {
-                    const pos = i + j;
-                    header += ' '.repeat(blockSize - String(pos).length) + '   ' + pos + ' ';
-                }
-                html += `<div class="seq-header">${header.trimEnd()}</div>`;
-
-                // Linha da sequência com span clicável
-                let seqLine = '';
-                for (let j = 0; j < line.length; j++) {
-                    const globalIdx = i + j;
-                    seqLine += `<span id="res${globalIdx}" onclick="highlightResidue(${globalIdx})"
-                                title="Residue ${globalIdx + 1}">${line[j]}</span>`;
-                    if ((j + 1) % blockSize === 0) seqLine += ' ';
-                }
-
-                html += `<div>${seqLine.trimEnd()}</div>`;
-            }
-
-            $('#seq_box').html(html);
-        }
 
     });
 
