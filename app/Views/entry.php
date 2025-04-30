@@ -191,23 +191,21 @@
     window.highlightResidue = function(idx) {
         const resi = idx + 1;
 
-        // Remove estilo anterior no modelo
         if (currentSel) glviewer.setStyle(currentSel, {});
         if (currentLabel) {
             glviewer.removeLabel(currentLabel);
             currentLabel = null;
         }
 
-        // Remove destaque anterior na sequência
         if (currentSpan) currentSpan.classList.remove('selected');
 
-        // Atualiza estilo da estrutura
+        // Update style
         currentSel = { resi: resi, chain: 'A' };
         glviewer.setStyle(currentSel, {
             stick: { radius: 0.2, colorscheme: 'default' }
         });
 
-        // Criar o label no átomo clicado
+        // Create label
         const model = glviewer.getModel();
         const atoms = model.selectedAtoms(currentSel);
         if (atoms.length > 0) {
@@ -224,14 +222,13 @@
                 backgroundColor: 'white',
                 backgroundOpacity: 0.8,
                 inFront: true,
-                position: { x: atom.x, y: atom.y, z: atom.z + 1.5 }  // ligeiramente acima
+                position: { x: atom.x, y: atom.y, z: atom.z + 1.5 }
             });
         }
 
         glviewer.zoomTo(currentSel);
         glviewer.render();
 
-        // Atualiza destaque na sequência
         const span = document.getElementById(`res${idx}`);
         if (span) {
             span.classList.add('selected');
@@ -315,57 +312,79 @@
         // Gera HTML da sequência (divide 10/60 car.)
         // ---------------------------------------------------------------------
         function renderSequence(seq) {
-        let html = '';
-        for (let i = 0; i < seq.length; i++) {
-            html += `<span onclick="highlightResidue(${i})"
-                        id="res${i}"
-                        title="Residue ${i + 1}">${seq[i]}</span>`;
+            const lineLength = 60;
+            const blockSize = 10;
+            let html = '';
 
-            // Espaçamento entre blocos de 10 resíduos
-            if ((i + 1) % 10 === 0) html += ' ';
+            for (let i = 0; i < seq.length; i += lineLength) {
+                const line = seq.slice(i, i + lineLength);
 
-            // Quebra de linha a cada 60
-            if ((i + 1) % 50 === 0) html += '\n';
+                // Cabeçalho de posições alinhado ao fim do bloco
+                let header = '';
+                for (let j = blockSize; j <= line.length; j += blockSize) {
+                    const pos = i + j;
+                    header += ' '.repeat(blockSize - String(pos).length) + '   ' + pos + ' ';
+                }
+                html += `<div class="seq-header">${header.trimEnd()}</div>`;
+
+                // Linha da sequência com span clicável
+                let seqLine = '';
+                for (let j = 0; j < line.length; j++) {
+                    const globalIdx = i + j;
+                    seqLine += `<span id="res${globalIdx}" onclick="highlightResidue(${globalIdx})"
+                                title="Residue ${globalIdx + 1}">${line[j]}</span>`;
+                    if ((j + 1) % blockSize === 0) seqLine += ' ';
+                }
+
+                html += `<div>${seqLine.trimEnd()}</div>`;
+            }
+
+            $('#seq_box').html(html);
         }
-        $('#seq_box').html(html);
-        }
+
     });
 
 </script>
 
 <style>
-    #seq_box {
-        font-family: 'Courier New', monospace;
-        white-space: pre-wrap;
-        background-color: #fcfcfc;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        padding: 12px 16px;
-        max-height: 160px;
-        overflow-y: auto;
-        font-size: 14px;
-        line-height: 1.6;
-        letter-spacing: 0.2px;
-    }
+#seq_box {
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 16px;
+    max-height: 220px;
+    overflow-y: auto;
+    font-size: 12px;
+    line-height: 1.6;
+}
 
-    #seq_box span {
-        cursor: pointer;
-        border-radius: 3px;
-        padding: 1px 2px;
-        transition: background-color 0.2s;
-    }
+.seq-header {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 2px;
+    user-select: none;
+}
 
-    #seq_box span:hover {
-        background-color: #e3f0ff;
-    }
+#seq_box span {
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 1px;
+    transition: background-color 0.2s ease;
+}
 
-    #seq_box span.selected {
-        background-color: #ffdddd;
-        font-weight: bold;
-        color: #a00000;
-    }
+#seq_box span:hover {
+    background-color: #e6f0ff;
+}
+
+#seq_box span.selected {
+    background-color: #ffdddd;
+    font-weight: bold;
+    color: #a00000;
+}
+
 </style>
-
 
 <?= $this->endSection() ?>
 
