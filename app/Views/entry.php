@@ -55,7 +55,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            // Build a unified list of mutations with their type
+                            // Unified list of mutations
                             $mutations = [];
                             foreach ($drivers     as $d) $mutations[] = ['mutation' => $d, 'type' => 'Driver'];
                             foreach ($nondrivers  as $d) $mutations[] = ['mutation' => $d, 'type' => 'Passenger'];
@@ -68,9 +68,7 @@
                                 $color    = $type === 'Driver' ? 'bg-danger' : 'bg-primary';
                                 $pdb_path = $type === 'Driver' ? 'drivers'  : 'non-drivers';
                         ?>
-                        <tr onclick="selectID(glviewer,
-                                              this.children[0].innerHTML,
-                                              this.children[1].innerHTML)"
+                        <tr onclick="selectResidue(glviewer, this.children[0].innerHTML, this.children[1].innerHTML)"
                             id="<?= $mutation ?>">
                             <td class="fw-semibold"><?= "p.$mutation" ?></td>
                             <td class="<?= $color ?> text-white"><?= $type ?></td>
@@ -185,7 +183,7 @@
     let currentSpan = null;
     let currentLabel = null;
 
-    function selectResidue(idx) {
+    function markSequenceResidue(idx) {
         const resi = idx + 1;
 
         // Clear previous styles
@@ -254,7 +252,7 @@
             let seqLine = '';
             for (let j = 0; j < line.length; j++) {
                 const globalIdx = i + j;
-                seqLine += `<span id="res${globalIdx}" onclick="selectResidue(${globalIdx})"
+                seqLine += `<span id="res${globalIdx}" onclick="markSequenceResidue(${globalIdx})"
                             title="Residue ${globalIdx + 1}">${line[j]}</span>`;
                 if ((j + 1) % blockSize === 0) seqLine += ' ';
             }
@@ -275,56 +273,17 @@
        3Dmol: select a residue by HGVS string
     --------------------------------------------------------------------- */
 
-    function selectID(glviewer, residue, type) {
+    function selectResidue(glviewer, residue, type) {
         if (!glviewer) return;
 
-        residue = residue.replace(/^p\./i, '');
-        const resiNum = parseInt((residue.match(/\d+/) || [])[0]);
-        if (!resiNum) return;
+        const resiText = residue.replace(/^p\./i, '');
+        const index = parseInt((resiText.match(/\d+/) || [])[0])-1;
+        if (!index) return;
 
-        // Clear previous styles
-        if (currentSel) glviewer.setStyle(currentSel, {});
-        if (currentLabel) {
-            glviewer.removeLabel(currentLabel);
-            currentLabel = null;
-        }
-        if (currentSpan) {
-            currentSpan.classList.remove('selected');
-            currentSpan = null;
-        }
-
-        // Apply selection style
-        const selection = { resi: resiNum, chain: 'A' };
-        currentSel = selection;
-        glviewer.setStyle(selection, {
-            stick: { radius: 0.2, colorscheme: 'default' }
-        });
-
-        const model = glviewer.getModel();
-        const atoms = model.selectedAtoms(selection);
-        if (atoms.length > 0) {
-            const atom = atoms[0];
-            const resName = atom.resn;
-            const resNum = atom.resi;
-            const plddt = atom.b ? atom.b.toFixed(1) : 'N/A';
-
-            // Add label with residue info
-            const labelText = `${resName} ${resNum}\npLDDT: ${plddt}`;
-            currentLabel = glviewer.addLabel(labelText, {
-                fontSize: 12,
-                fontColor: 'black',
-                backgroundColor: 'white',
-                backgroundOpacity: 0.8,
-                inFront: true,
-                position: { x: atom.x, y: atom.y, z: atom.z + 1.5 }
-            });
-        }
-
-        glviewer.zoomTo(selection);
-        glviewer.render();
+        markSequenceResidue(index);
 
         const gene = "<?= $id ?>";
-        const mut = residue;
+        const mut = resiText;
         const fastaPath = (type.trim().toLowerCase() === 'driver') ? 'drivers' : 'non-drivers';
         const fastaURL = `<?= base_url() ?>data/fastas/${fastaPath}/${gene}_mutated_p${mut}.fasta`;
 
@@ -337,7 +296,7 @@
 
             // Update the DOM
             setTimeout(() => {
-                const span = document.getElementById(`res${resiNum - 1}`);
+                const span = document.getElementById(`res${index}`);
                 if (span) {
                     span.classList.add('selected');
                     span.scrollIntoView({ behavior: 'smooth', block: 'center' });
