@@ -113,12 +113,99 @@
 
 <!-- JavaScript ------------------------------------------------------------>
 <script>
-    let glviewer;
 
     /* ---------------------------------------------------------------------
-       Color cartoon by pLDDT (B-factor column stores pLDDT for AlphaFold)
-    --------------------------------------------------------------------- */
-    function colorByPLDDT(atom) {
+        General functions
+    ------------------------------------------------------------------------ */
+    let glviewer;
+
+    let currentSel = null;
+    let currentSpan = null;
+    let currentLabel = null;
+    
+    // Highlight sequence in HTML
+    function markSequenceResidue(idx) {
+        const resi = idx + 1;
+
+        // Clear previous styles
+        if (currentSel) glviewer.setStyle(currentSel, {});
+        if (currentLabel) {
+            glviewer.removeLabel(currentLabel);
+            currentLabel = null;
+        }
+        if (currentSpan) currentSpan.classList.remove('selected');
+
+        // Apply selection style
+        currentSel = { resi: resi, chain: 'A' };
+        glviewer.setStyle(currentSel, {
+            stick: { radius: 0.2, colorscheme: 'default' }
+        });
+
+        const model = glviewer.getModel();
+        const atoms = model.selectedAtoms(currentSel);
+        if (atoms.length > 0) {
+            const atom = atoms[0];
+            const resName = atom.resn;
+            const resNum = atom.resi;
+            const plddt = atom.b ? atom.b.toFixed(1) : 'N/A';
+
+            // Add label with residue info
+            const labelText = `${resName} ${resNum}\npLDDT: ${plddt}`;
+            currentLabel = glviewer.addLabel(labelText, {
+                fontSize: 12,
+                fontColor: 'black',
+                backgroundColor: 'white',
+                backgroundOpacity: 0.8,
+                inFront: true,
+                position: { x: atom.x, y: atom.y, z: atom.z + 1.5 }
+            });
+        }
+
+        glviewer.zoomTo(currentSel);
+        glviewer.render();
+
+        const span = document.getElementById(`res${idx}`);
+        if (span) {
+            span.classList.add('selected');
+            span.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            currentSpan = span;
+        }
+    }
+
+    // Render FASTA sequence
+    function renderSequence(seq) {
+        const lineLength = 60;
+        const blockSize = 10;
+        let html = '';
+
+        for (let i = 0; i < seq.length; i += lineLength) {
+            const line = seq.slice(i, i + lineLength);
+
+            // Position header
+            let header = '';
+            for (let j = blockSize; j <= line.length; j += blockSize) {
+                const pos = i + j;
+                header += ' '.repeat(blockSize - String(pos).length) + '   ' + pos + ' ';
+            }
+            html += `<div class="seq-header">${header.trimEnd()}</div>`;
+
+            // Protein sequence
+            let seqLine = '';
+            for (let j = 0; j < line.length; j++) {
+                const globalIdx = i + j;
+                seqLine += `<span id="res${globalIdx}" onclick="markSequenceResidue(${globalIdx})"
+                            title="Residue ${globalIdx + 1}">${line[j]}</span>`;
+                if ((j + 1) % blockSize === 0) seqLine += ' ';
+            }
+
+            html += `<div>${seqLine.trimEnd()}</div>`;
+        }
+
+        $('#seq_box').html(html);
+    }
+
+    // Color cartoon by pLDDT (B-factor column stores pLDDT for AlphaFold)
+    function colorByPLDDT(atom) {                   
         const p = atom.b;
         if (p > 90) return '#0053D6';   // very high
         if (p > 70) return '#4DA3FF';   // high
@@ -126,6 +213,12 @@
         if (p > 30) return '#FF7B2D';   // low
         return '#FF4040';               // very low (<30)
     }
+
+    // Fade out loading screen
+    $(() => setTimeout(() => $('#loading').fadeOut(), 1000));
+
+    // Keep nav fixed inside the view container
+    $('nav').css('position', 'relative');
 
     /* ---------------------------------------------------------------------
        DataTable with mutations
@@ -176,103 +269,8 @@
     });
 
     /* ---------------------------------------------------------------------
-        General functions
-    ------------------------------------------------------------------------ */
-
-    let currentSel = null;
-    let currentSpan = null;
-    let currentLabel = null;
-
-    function markSequenceResidue(idx) {
-        const resi = idx + 1;
-
-        // Clear previous styles
-        if (currentSel) glviewer.setStyle(currentSel, {});
-        if (currentLabel) {
-            glviewer.removeLabel(currentLabel);
-            currentLabel = null;
-        }
-        if (currentSpan) currentSpan.classList.remove('selected');
-
-        // Apply selection style
-        currentSel = { resi: resi, chain: 'A' };
-        glviewer.setStyle(currentSel, {
-            stick: { radius: 0.2, colorscheme: 'default' }
-        });
-
-        const model = glviewer.getModel();
-        const atoms = model.selectedAtoms(currentSel);
-        if (atoms.length > 0) {
-            const atom = atoms[0];
-            const resName = atom.resn;
-            const resNum = atom.resi;
-            const plddt = atom.b ? atom.b.toFixed(1) : 'N/A';
-
-            // Add label with residue info
-            const labelText = `${resName} ${resNum}\npLDDT: ${plddt}`;
-            currentLabel = glviewer.addLabel(labelText, {
-                fontSize: 12,
-                fontColor: 'black',
-                backgroundColor: 'white',
-                backgroundOpacity: 0.8,
-                inFront: true,
-                position: { x: atom.x, y: atom.y, z: atom.z + 1.5 }
-            });
-        }
-
-        glviewer.zoomTo(currentSel);
-        glviewer.render();
-
-        // Highlight sequence in HTML
-        const span = document.getElementById(`res${idx}`);
-        if (span) {
-            span.classList.add('selected');
-            span.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            currentSpan = span;
-        }
-    }
-
-    function renderSequence(seq) {
-        const lineLength = 60;
-        const blockSize = 10;
-        let html = '';
-
-        for (let i = 0; i < seq.length; i += lineLength) {
-            const line = seq.slice(i, i + lineLength);
-
-            // Position header
-            let header = '';
-            for (let j = blockSize; j <= line.length; j += blockSize) {
-                const pos = i + j;
-                header += ' '.repeat(blockSize - String(pos).length) + '   ' + pos + ' ';
-            }
-            html += `<div class="seq-header">${header.trimEnd()}</div>`;
-
-            // Protein sequence
-            let seqLine = '';
-            for (let j = 0; j < line.length; j++) {
-                const globalIdx = i + j;
-                seqLine += `<span id="res${globalIdx}" onclick="markSequenceResidue(${globalIdx})"
-                            title="Residue ${globalIdx + 1}">${line[j]}</span>`;
-                if ((j + 1) % blockSize === 0) seqLine += ' ';
-            }
-
-            html += `<div>${seqLine.trimEnd()}</div>`;
-        }
-
-        $('#seq_box').html(html);
-    }
-
-    // Fade out loading screen
-    $(() => setTimeout(() => $('#loading').fadeOut(), 1000));
-
-    // Keep nav fixed inside the view container
-    $('nav').css('position', 'relative');
-
-    /* ---------------------------------------------------------------------
        3Dmol: select a residue by HGVS string
     --------------------------------------------------------------------- */
-
     function selectResidue(glviewer, residue, type) {
         if (!glviewer) return;
 
@@ -315,46 +313,35 @@
     --------------------------------------------------------------------- */
     $(document).ready(function () {
 
-    // ---------------------------------------------------------------------
-    // URLs do modelo
-    // ---------------------------------------------------------------------
     <?php if (count($drivers) > 0): ?>
     const pdbURL  = "<?= base_url(); ?>data/models/drivers/<?= $id; ?>/p<?= $drivers[0]; ?>/ranked_0.pdb";
     <?php else: ?>
     const pdbURL  = "<?= base_url(); ?>data/models/non-drivers/<?= $id; ?>/p<?= $nondrivers[0]; ?>/ranked_0.pdb";
     <?php endif; ?>
 
-    // ---------------------------------------------------------------------
-    // Carrega PDB e sequência, depois inicializa visor
-    // ---------------------------------------------------------------------
     $.get(pdbURL).done(data => {
 
-        /* -- 1. cria o visor 3D ----------------------------------------- */
-        glviewer = $3Dmol.createViewer("pdb", { backgroundColor:'#fff' });
+        // Create the 3D viewer
+        glviewer = $3Dmol.createViewer("pdb", { backgroundColor: '#fff' });
         const model = glviewer.addModel(data, "pdb");
-        glviewer.setStyle({}, { cartoon:{ colorfunc:colorByPLDDT } });
+        glviewer.setStyle({}, { cartoon: { colorfunc: colorByPLDDT } });
         glviewer.zoomTo();
         glviewer.render();
 
-        /* -- 2. extrai sequência do modelo ------------------------------ */
+        // Extract sequence from the model
         const atoms = model.selectedAtoms({});
-        const seq   = [];                    // 0-based array de letras
+        const seq = [];                         
         atoms.forEach(a => {
-            const i = a.resi - 1;            // resi é 1-based
-            seq[i]  = a.resn[0];             // pega 1ª letra do resn
+            const i = a.resi - 1;               
+            seq[i] = a.resn[0];                 
         });
         const sequence = seq.join('');
 
-        /* -- 3. exibe sequência como spans clicáveis -------------------- */
-        renderSequence(sequence);            // definida abaixo
-        $('#seq_box').show();                // torna visível
-        });
-
-        // ---------------------------------------------------------------------
-        // Gera HTML da sequência (divide 10/60 car.)
-        // ---------------------------------------------------------------------
-
+        renderSequence(sequence);              
+        $('#seq_box').show();                  
     });
+
+});
 
 </script>
 
