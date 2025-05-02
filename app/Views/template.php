@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="<?= base_url('img/galaxito.png') ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= base_url('img/OncoFold - logo.png') ?>" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">   
@@ -40,8 +40,9 @@
     <header class="py-3 mb-4 border-bottom">
         <div class="px-5 container-fluid d-flex flex-wrap justify-content-center">
         <a href="<?= base_url() ?>" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
-            <!-- <img src="<?= base_url('/img/cocada.svg') ?>" width="250"> -->
-            <h1 class="text-white">OncoFoldDB</h1>
+            <h1 class="text-white">
+                OncoFold<span class="fw-semibold">DB</span>
+            </h1>
         </a>
         <form class="col-12 col-md-auto mb-3 mb-md-0" role="search">
             <input type="search" class="form-control form-control-md mt-2" placeholder="Search..." aria-label="Search" onkeydown="redirectToURL(event)" id="urlInput">

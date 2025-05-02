@@ -4,7 +4,7 @@
 <!-- Custom content -->
 <div id="loading">
     <div class="text-center">
-        <img src="<?= base_url('/img/cocadito-loading.png') ?>" width="200px"><br>
+        <img src="<?= base_url('/img/galaxito.png') ?>" width="200px"><br>
         <div class="spinner-border spinner-border-sm" role="status"></div>
         <strong class="ms-2">Loading...</strong>
     </div>

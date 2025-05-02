@@ -13,7 +13,7 @@
     <!-- Image Section -->
     <div class="col-10 col-sm-8 col-md-6">
       <img 
-        src="<?= base_url('/img/home.png') ?>" 
+        src="<?= base_url('/img/OncoFold - descritivo.png') ?>" 
         class="d-block mx-lg-auto img-fluid" 
         alt="3D protein structure visual from CosmicLBS" 
         width="450" 
@@ -23,7 +23,9 @@
     
     <!-- Text Section -->
     <div class="col-md-6 text-center text-md-start">
-      <h1 class="display-5 fw-semibold text-body-emphasis lh-1 mb-3">OncoFoldDB</h1>
+      <h1 class="display-5 fw-semibold text-body-emphasis lh-1 mb-3">
+        OncoFold<span class="fw-bold">DB</span>
+      </h1>
 
       <p class="lead">
         OncoFoldDB is a curated database of 3D structures for cancer-related driver and non-driver mutations, modeled with AlphaFold. 
