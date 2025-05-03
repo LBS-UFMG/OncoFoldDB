@@ -20,10 +20,10 @@
         <div class="row">
             <div class="col-md-9 col-xs-12 pt-2">
                 <h2 class="title_h2 pt-4">
-                    <strong><?= $gene_id; ?></strong>
+                    <strong><?= $geneId; ?></strong>
                 </h2>
 
-                <h4><?= $gene_name; ?></h4>
+                <h4><?= $geneName; ?></h4>
 
                 <p class="mb-0 mt-3">
                     <strong>Driver Mutations Count:</strong>
@@ -241,7 +241,7 @@
                     map[geneKey][mutKey]  = url;
                 });
 
-                const gene = Gene('<?= $gene_id ?>');
+                const gene = Gene('<?= $geneId ?>');
 
                 function fillReferenceColumn() {
                     $('#mut tbody tr').each(function () {

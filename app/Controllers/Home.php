@@ -11,7 +11,7 @@ class Home extends BaseController
 
         $url = "./data/pdb/total_contacts.txt";
 
-        $data['h1'] = "48";
+        $data['h1'] = "45";
         $data['h2'] = "205";
         $data['h3'] = "199";
         $data['h4'] = "404";
@@ -129,8 +129,8 @@ class Home extends BaseController
         $data['total_results'] = 1;
         // pega informações de contatos
 
-        $data['gene_id'] = $data['info'][0];
-        $data['gene_name'] = $data['info'][1];
+        $data['geneId'] = $data['info'][0];
+        $data['geneName'] = $data['info'][1];
         $data['function'] = $data['info'][2];
         $data['pmid'] = $data['info'][3];
         $data['drivers'] = explode(', ', $data['info'][4]);
