@@ -81,26 +81,26 @@
     <div class="modal fade" tabindex="-1" id="about" role="dialog">
     <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
         <div class="modal-content">
-        <div class="modal-header bg-primary">
+        <div class="modal-header bg-white">
             <div class="text-center">
-            <img width="150" class="me-3" src="<?php echo base_url('/img/cocadito-loading.png'); ?>">
+            <img width="150" class="me-3" src="<?php echo base_url('/img/OncoFold - descritivo.png'); ?>">
             </div>
             <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body small">
             <div class="row">
             <p class="text-muted">
-                VarFoldDB
+                OncoFold<span class="fw-bold">DB</span>
             </p>
             </div>
             <div class="row text-secondary">
                 <div class="col-md-8">
 
-                    <strong># Created by:</strong><br>
+                    <strong>Authored by</strong><br>
                     Raquel C. de Melo-Minardi<br><br>
 
-                    <strong># Backend/frontend:</strong><br>
-                    Diego Mariano
+                    <strong>Development Team</strong><br>
+                    Lucas Moraes dos Santos & Diego Mariano
                 </div>
             </div>
 

@@ -28,7 +28,6 @@ TP53	tumor protein p53	TSG, Fusion, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?t
 FGFR2	fibroblast growth factor receptor 2	Oncogene, Fusion	https://pubmed.ncbi.nlm.nih.gov/?term=18636142,23558953	S252W	
 IDH2	isocitrate dehydrogenase 2 (NADP+), mitochondrial	Oncogene	https://pubmed.ncbi.nlm.nih.gov/28711227/	R140L, R140Q, R140W, R172K, R172M, R172S	D54N, G55S, T352P, M219L, P213T, W164C
 BTK	bruton agammaglobulinemia tyrosine kinase	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=19471023,24954503	C481S	R255P
-FGFR3	fibroblast growth factor receptor 3	Oncogene, Fusion	https://pubmed.ncbi.nlm.nih.gov/11429702/	R248C, S249C	A150V, A281T
 CBL	Cas-Br-M (murine) ecotropic retroviral transforming	Oncogene, TSG, Fusion	https://pubmed.ncbi.nlm.nih.gov/?term=25952305,26697989	C384R, R420Q, Y371C, Y371H	L281H, Q207K, S839N, R540Q
 FGFR4	fibroblast growth factor receptor 4	Oncogene	https://pubmed.ncbi.nlm.nih.gov/19946327/	G388R	
 FLT3	fms-related tyrosine kinase 3	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26697989/	D835A, D835E, D835H, D835N, D835V, D835Y	A447V, E672K, E767K, K568E, M908V, N289S
@@ -44,4 +43,3 @@ CRLF2	cytokine receptor-like factor 2	Oncogene	https://pubmed.ncbi.nlm.nih.gov/2
 GNA11	guanine nucleotide binding protein (G protein), alpha 11 (Gq class)	Oncogene	https://pubmed.ncbi.nlm.nih.gov/21083380/	Q209L, Q209P, R183C	L353V, S268F, V184M
 CSF3R	colony stimulating factor 3 receptor (granulocyte)	Oncogene	https://pubmed.ncbi.nlm.nih.gov/26475333/	T618I	P558L
 NOTCH1	notch homolog 1, translocation-associated (drosophila) (TAN1)	TSG, Oncogene	https://pubmed.ncbi.nlm.nih.gov/?term=15472075,26168399	F1592C	
-MET	met proto-oncogene (hepatocyte growth factor receptor)	Oncogene, Fusion	https://pubmed.ncbi.nlm.nih.gov/?term=28603720,31097696		T621I

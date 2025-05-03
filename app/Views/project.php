@@ -7,7 +7,7 @@
 
 <div id="loading">
     <div class="text-center">
-        <img src="<?=base_url('/img/cocadito-loading.png')?>" width="200px"><br>
+        <img src="<?=base_url('/img/galaxito.png')?>" width="200px"><br>
         <div class="spinner-border spinner-border-sm" role="status"></div>
         <strong class="ms-2">Loading...</strong>
     </div>
@@ -191,8 +191,6 @@
 
 <!-- Return to Top -->
 <a href="#" title="Return to top" style="font-size:25px; position:fixed; right:10px; bottom:10px"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
-
-
 
 <script>
     $(()=>setTimeout(() => $('#loading').fadeOut(), 1000));

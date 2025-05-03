@@ -69,9 +69,7 @@
               </div>
               <div class="col-md-9 text-end">
                 <h3 class="mt-4">
-                  <strong class="texto-azul">
-                    <?=$h1?>
-                  </strong>
+                  <strong class="texto-azul">45</strong>
                 </h3>
                 <p class="text-muted small"><strong>Genes</strong></p>
               </div>

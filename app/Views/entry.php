@@ -8,7 +8,7 @@
 <!-- Loading overlay ------------------------------------------------------->
 <div id="loading">
     <div class="text-center">
-        <img src="<?= base_url('/img/cocadito-loading.png') ?>" width="200px"><br>
+        <img src="<?= base_url('/img/galaxito.png') ?>" width="200px"><br>
         <div class="spinner-border spinner-border-sm" role="status"></div>
         <strong class="ms-2">Loading...</strong>
     </div>
@@ -99,7 +99,7 @@
                         border:1px solid #ddd;padding:4px;margin-bottom:8px;
                         display:none"></div>
                 <div id="pdb" style="min-height: 400px; height: 50vh; min-width:280px; width: 100%"></div>
-                <p style="color:#ccc; text-align:right;">AlphaFold Model</p>
+                <p style="color:#bbb; text-align:right;">AlphaFold2 Model</p>
             </div>
         </div>
     </div>
