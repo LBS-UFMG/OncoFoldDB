@@ -321,13 +321,21 @@
 
     $.get(pdbURL).done(data => {
         // Build the FASTA URL
-        const parts    = pdbURL.split('/');
+        /*const parts    = pdbURL.split('/');
         const type     = parts[5];              // "drivers" or "non-drivers"
         const gene     = parts[6];              // e.g. "CDK4"
         const mutHGVS  = parts[7];              // e.g. "pR24C"
         const mut      = mutHGVS.startsWith('p')
                         ? mutHGVS.slice(1) 
-                        : mutHGVS;          
+                        : mutHGVS;*/    
+                        
+        const parts    = pdbURL.split('/');
+        const type     = parts[7];              // "drivers" or "non-drivers"
+        const gene     = parts[8];              // e.g. "CDK4"
+        const mutHGVS  = parts[9];              // e.g. "pR24C"
+        const mut      = mutHGVS.startsWith('p')
+                        ? mutHGVS.slice(1) 
+                        : mutHGVS;
 
         const fastaURL = `<?= base_url() ?>data/fastas/${type}/${gene}_mutated_p${mut}.fasta`;
 
