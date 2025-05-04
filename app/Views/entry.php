@@ -321,14 +321,16 @@
 
     $.get(pdbURL).done(data => {
         // Build the FASTA URL
-        /*const parts    = pdbURL.split('/');
+        /* Local
+        const parts    = pdbURL.split('/');
         const type     = parts[5];              // "drivers" or "non-drivers"
         const gene     = parts[6];              // e.g. "CDK4"
         const mutHGVS  = parts[7];              // e.g. "pR24C"
         const mut      = mutHGVS.startsWith('p')
                         ? mutHGVS.slice(1) 
                         : mutHGVS;*/    
-                        
+        
+        // http://bioinfo.dcc.ufmg.br/oncofold/public/
         const parts    = pdbURL.split('/');
         const type     = parts[7];              // "drivers" or "non-drivers"
         const gene     = parts[8];              // e.g. "CDK4"
