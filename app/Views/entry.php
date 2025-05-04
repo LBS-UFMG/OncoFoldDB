@@ -341,9 +341,6 @@
 
         const fastaURL = `<?= base_url() ?>data/fastas/${type}/${gene}_mutated_p${mut}.fasta`;
 
-        console.log(pdbURL)
-        console.log(fastaURL)
-
         // Create the 3D viewer
         glviewer = $3Dmol.createViewer("pdb", { backgroundColor: '#fff' });
         const model = glviewer.addModel(data.toString(), "pdb");
