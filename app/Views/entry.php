@@ -320,25 +320,39 @@
     <?php endif; ?>
 
     $.get(pdbURL).done(data => {
+        // Build the FASTA URL
+        const parts    = pdbURL.split('/');
+        const type     = parts[5];              // "drivers" or "non-drivers"
+        const gene     = parts[6];              // e.g. "CDK4"
+        const mutHGVS  = parts[7];              // e.g. "pR24C"
+        const mut      = mutHGVS.startsWith('p')
+                        ? mutHGVS.slice(1) 
+                        : mutHGVS;          
+
+        const fastaURL = `<?= base_url() ?>data/fastas/${type}/${gene}_mutated_p${mut}.fasta`;
 
         // Create the 3D viewer
         glviewer = $3Dmol.createViewer("pdb", { backgroundColor: '#fff' });
-        const model = glviewer.addModel(data, "pdb");
+        const model = glviewer.addModel(data.toString(), "pdb");
         glviewer.setStyle({}, { cartoon: { colorfunc: colorByPLDDT } });
         glviewer.zoomTo();
         glviewer.render();
 
-        // Extract sequence from the model
-        const atoms = model.selectedAtoms({});
-        const seq = [];                         
-        atoms.forEach(a => {
-            const i = a.resi - 1;               
-            seq[i] = a.resn[0];                 
-        });
-        const sequence = seq.join('');
+        // Fetch the corresponding FASTA and render its sequence
+        $.get(fastaURL)
+        .done(fasta => {
+            const sequence = fasta
+            .trim()
+            .split(/\r?\n/)
+            .filter(line => !line.startsWith('>'))
+            .join('');
 
-        renderSequence(sequence);              
-        $('#seq_box').show();                  
+            renderSequence(sequence);
+            $('#seq_box').show();
+        })
+        .fail(err => {
+            console.error("Failed to load FASTA:", err);
+        });
     });
 
 });
